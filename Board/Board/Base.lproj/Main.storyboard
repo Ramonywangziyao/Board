@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="I4H-Sk-9BT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -68,13 +68,23 @@
                                     </mask>
                                 </variation>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-ZA-fZu" userLabel="Menu Drag Mask">
+                                <rect key="frame" x="0.0" y="64" width="16" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="jOi-Jd-oso"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="RJ8-ZA-fZu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CgD-6I-ZRP"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FUq-20-89V"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vhx-8L-Fxp" secondAttribute="bottom" id="FUy-4D-h4Q"/>
                             <constraint firstAttribute="trailing" secondItem="vhx-8L-Fxp" secondAttribute="trailing" id="GpU-h9-yoH"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hlj-T6-rZZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RJ8-ZA-fZu" secondAttribute="bottom" id="rpR-YP-yCG"/>
+                            <constraint firstItem="RJ8-ZA-fZu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xQS-Jx-0ob"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j7d-0n-9DZ"/>

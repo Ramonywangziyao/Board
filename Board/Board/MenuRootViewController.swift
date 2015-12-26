@@ -17,17 +17,17 @@ class MenuRootViewController: RESideMenu, RESideMenuDelegate {
     }
 
     override func awakeFromNib() {
-    self.contentViewController = Main.instantiateViewControllerWithIdentifier("ContentNavigationController") as! UINavigationController
-    self.leftMenuViewController = Menu.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
-    self.menuPreferredStatusBarStyle = UIStatusBarStyle.LightContent
-//    self.backgroundImage = UIImage(named: "侧边栏背景")
-    self.contentViewShadowColor = UIColor.blackColor();
-    self.contentViewShadowOffset = CGSizeMake(0, 0);
-    self.contentViewShadowOpacity = 0.6;
-    self.contentViewShadowRadius = 12;
-    self.contentViewShadowEnabled = true;
-    self.contentViewScaleValue = 0.89
-    self.contentViewInPortraitOffsetCenterX = self.contentViewController.view.center.x - 107
+        self.contentViewController = Main.instantiateViewControllerWithIdentifier("ContentNavigationController") as! UINavigationController
+        self.leftMenuViewController = Menu.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
+        self.menuPreferredStatusBarStyle = UIStatusBarStyle.LightContent
+    //    self.backgroundImage = UIImage(named: "menu_background.png")
+        self.contentViewShadowColor = UIColor.blackColor();
+        self.contentViewShadowOffset = CGSizeMake(0, 0);
+        self.contentViewShadowOpacity = 0.6;
+        self.contentViewShadowRadius = 12;
+        self.contentViewShadowEnabled = true;
+        self.contentViewScaleValue = 0.88
+        self.contentViewInPortraitOffsetCenterX = self.contentViewController.view.center.x - 108
     }
 
 }
