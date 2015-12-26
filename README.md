@@ -6,6 +6,10 @@ Hassle-free bill splitting app
 2. `cd Board/Board && pod install`
 3. `open Board.xcworkspace`
 
+# Notices
+1. Initial storyboard is no longer `Main.storyboard` but `Menu.storyboard`
+2. Please seperate different modules on different storyboards, keeping organized
+
 # Pods Used
 ```
 pod 'Alamofire'
