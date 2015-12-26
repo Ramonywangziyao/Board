@@ -6,7 +6,7 @@ target 'Board' do
 
 pod 'Alamofire'
 pod 'SwiftyJSON'
-pod 'SDWebImage'
+pod 'YYKit'
 
 pod 'TextFieldEffects'
 pod 'JTSImageViewController'
