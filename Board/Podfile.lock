@@ -23,7 +23,8 @@ PODS:
   - FBSDKShareKit (4.8.0):
     - FBSDKCoreKit
   - JTSImageViewController (1.5.1)
-  - MJRefresh (3.0.8)
+  - JZNavigationExtension (1.3.0)
+  - PullToBounce (0.0.3)
   - ReactiveCocoa (4.0.4-alpha-4):
     - ReactiveCocoa/UI (= 4.0.4-alpha-4)
     - Result (~> 1.0)
@@ -61,7 +62,8 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - JTSImageViewController
-  - MJRefresh
+  - JZNavigationExtension
+  - PullToBounce
   - ReactiveCocoa (~> 4.0.4-alpha-4)
   - RESideMenu
   - SnapKit
@@ -92,7 +94,8 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
-  MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  JZNavigationExtension: d4573c6461f979a8b4a7ba8c0055e4eb89b9ed1f
+  PullToBounce: d2c6300b92fa124f7133e0ca0088bbf7a7059194
   ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
   Result: caef80340451e1f07492fa1e89117f83613bce24

@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="294.5" y="349.5"/>
         </scene>
-        <!--Bill View Controller-->
+        <!--Empty Data Set Delegate-->
         <scene sceneID="vvr-A7-zQa">
             <objects>
                 <viewController id="9Wb-KJ-1ZM" customClass="BillViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
@@ -105,8 +105,29 @@
                     <view key="view" contentMode="scaleToFill" id="fZl-5T-Cti">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnb-Yr-hqR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Wb-KJ-1ZM" id="3pO-l3-gPG"/>
+                                    <outlet property="delegate" destination="9Wb-KJ-1ZM" id="LAU-Ru-IKW"/>
+                                    <outlet property="emptyDataSetDelegate" destination="9Wb-KJ-1ZM" id="5zI-gB-iCP"/>
+                                    <outlet property="emptyDataSetSource" destination="9Wb-KJ-1ZM" id="v5Q-Ah-CxY"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pnb-Yr-hqR" secondAttribute="trailing" id="Nx5-Yu-rwv"/>
+                            <constraint firstItem="pnb-Yr-hqR" firstAttribute="leading" secondItem="fZl-5T-Cti" secondAttribute="leading" id="Wbi-bl-b8Q"/>
+                            <constraint firstItem="YhK-PN-TCv" firstAttribute="top" secondItem="pnb-Yr-hqR" secondAttribute="bottom" id="bZ4-T1-PGi"/>
+                            <constraint firstItem="pnb-Yr-hqR" firstAttribute="top" secondItem="omS-Vt-x6I" secondAttribute="bottom" id="yD0-kg-WOK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="pnb-Yr-hqR" id="3jo-A5-Bj5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hY-nE-MLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,6 +160,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xn0-kZ-Thn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
