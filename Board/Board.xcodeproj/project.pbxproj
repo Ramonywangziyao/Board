@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		32D984851C11E4D51A9298BF /* Pods_Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A0166B03423BA0DDF253C9 /* Pods_Board.framework */; };
 		8822A0321C2E8570007D66DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0311C2E8570007D66DB /* AppDelegate.swift */; };
-		8822A0341C2E8570007D66DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0331C2E8570007D66DB /* ViewController.swift */; };
+		8822A0341C2E8570007D66DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0331C2E8570007D66DB /* BaseViewController.swift */; };
 		8822A0371C2E8570007D66DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8822A0351C2E8570007D66DB /* Main.storyboard */; };
 		8822A0391C2E8570007D66DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8822A0381C2E8570007D66DB /* Assets.xcassets */; };
 		8822A03C1C2E8570007D66DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8822A03A1C2E8570007D66DB /* LaunchScreen.storyboard */; };
 		8822A0471C2E8570007D66DB /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0461C2E8570007D66DB /* BoardTests.swift */; };
 		8822A0521C2E8570007D66DB /* BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0511C2E8570007D66DB /* BoardUITests.swift */; };
+		8822A0601C2E885C007D66DB /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A05F1C2E885C007D66DB /* BillViewController.swift */; };
+		8822A0621C2E886C007D66DB /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0611C2E886C007D66DB /* BalanceViewController.swift */; };
+		8822A0651C2E8895007D66DB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0641C2E8895007D66DB /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		71A0166B03423BA0DDF253C9 /* Pods_Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8822A02E1C2E8570007D66DB /* Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Board.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8822A0311C2E8570007D66DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8822A0331C2E8570007D66DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8822A0331C2E8570007D66DB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8822A0361C2E8570007D66DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8822A0381C2E8570007D66DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8822A03B1C2E8570007D66DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +53,9 @@
 		8822A04D1C2E8570007D66DB /* BoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8822A0511C2E8570007D66DB /* BoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardUITests.swift; sourceTree = "<group>"; };
 		8822A0531C2E8570007D66DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8822A05F1C2E885C007D66DB /* BillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
+		8822A0611C2E886C007D66DB /* BalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
+		8822A0641C2E8895007D66DB /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,9 +119,12 @@
 		8822A0301C2E8570007D66DB /* Board */ = {
 			isa = PBXGroup;
 			children = (
+				8822A0631C2E8873007D66DB /* Controllers */,
+				8822A0671C2E88BB007D66DB /* Models */,
+				8822A0681C2E88CD007D66DB /* Views */,
+				8822A0661C2E889C007D66DB /* Services */,
+				8822A0691C2E88EC007D66DB /* Storyboards */,
 				8822A0311C2E8570007D66DB /* AppDelegate.swift */,
-				8822A0331C2E8570007D66DB /* ViewController.swift */,
-				8822A0351C2E8570007D66DB /* Main.storyboard */,
 				8822A0381C2E8570007D66DB /* Assets.xcassets */,
 				8822A03A1C2E8570007D66DB /* LaunchScreen.storyboard */,
 				8822A03D1C2E8570007D66DB /* Info.plist */,
@@ -139,6 +148,46 @@
 				8822A0531C2E8570007D66DB /* Info.plist */,
 			);
 			path = BoardUITests;
+			sourceTree = "<group>";
+		};
+		8822A0631C2E8873007D66DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8822A0331C2E8570007D66DB /* BaseViewController.swift */,
+				8822A05F1C2E885C007D66DB /* BillViewController.swift */,
+				8822A0611C2E886C007D66DB /* BalanceViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8822A0661C2E889C007D66DB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8822A0641C2E8895007D66DB /* WebService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		8822A0671C2E88BB007D66DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		8822A0681C2E88CD007D66DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8822A0691C2E88EC007D66DB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8822A0351C2E8570007D66DB /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		A2A6A6DC28C108286191AD84 /* Frameworks */ = {
@@ -331,8 +380,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8822A0341C2E8570007D66DB /* ViewController.swift in Sources */,
+				8822A0341C2E8570007D66DB /* BaseViewController.swift in Sources */,
 				8822A0321C2E8570007D66DB /* AppDelegate.swift in Sources */,
+				8822A0601C2E885C007D66DB /* BillViewController.swift in Sources */,
+				8822A0651C2E8895007D66DB /* WebService.swift in Sources */,
+				8822A0621C2E886C007D66DB /* BalanceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
