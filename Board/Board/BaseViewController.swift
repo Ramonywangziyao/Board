@@ -30,5 +30,8 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    @IBAction func menuButtonDidPressed(sender: UIBarButtonItem) {
+        self.sideMenuViewController.presentLeftMenuViewController()
+    }
 }
 
