@@ -106,9 +106,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnb-Yr-hqR">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pnb-Yr-hqR">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="105" id="hZI-O8-Pdt" customClass="BillTableViewCell" customModule="Board" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZI-O8-Pdt" id="mdX-Vt-Oi8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2G-Uz-3WP">
+                                                    <rect key="frame" x="8" y="8" width="359" height="88.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="L2G-Uz-3WP" firstAttribute="leading" secondItem="mdX-Vt-Oi8" secondAttribute="leading" constant="8" id="0jl-3a-2s9"/>
+                                                <constraint firstAttribute="bottom" secondItem="L2G-Uz-3WP" secondAttribute="bottom" constant="8" id="1na-zH-Wid"/>
+                                                <constraint firstAttribute="trailing" secondItem="L2G-Uz-3WP" secondAttribute="trailing" constant="8" id="kTh-NU-K0k"/>
+                                                <constraint firstItem="L2G-Uz-3WP" firstAttribute="top" secondItem="mdX-Vt-Oi8" secondAttribute="top" constant="8" id="whJ-sW-ifP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="backView" destination="L2G-Uz-3WP" id="Df4-En-Enf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="9Wb-KJ-1ZM" id="3pO-l3-gPG"/>
                                     <outlet property="delegate" destination="9Wb-KJ-1ZM" id="LAU-Ru-IKW"/>
@@ -131,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2hY-nE-MLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87.5" y="1189.5"/>
+            <point key="canvasLocation" x="86.5" y="1189.5"/>
         </scene>
         <!--Balance View Controller-->
         <scene sceneID="bvl-Jp-AZ5">
@@ -149,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdF-me-eou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="516.5" y="1189.5"/>
+            <point key="canvasLocation" x="504.5" y="1189.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2L3-Jr-iNk">
