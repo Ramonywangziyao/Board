@@ -15,7 +15,8 @@ class BillTableView: UITableView {
         super.init(frame: frame, style: style)
         self.registerClass(BillTableViewCell.self, forCellReuseIdentifier: "BillTableViewCell")
         self.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.backgroundView?.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.fb_white()
+        self.tableFooterView = UIView()
     }
     
     required init?(coder aDecoder: NSCoder) {
