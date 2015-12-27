@@ -7,16 +7,34 @@
 //
 
 import UIKit
+import PullToBounce
 
-class BillViewController: UIViewController {
+class BillViewController: UIViewController, UITableViewDelegate {
 
-    @IBOutlet weak var tableView: UITableView!
+    var tableView: BillTableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let bodyView = UIView()
+        bodyView.backgroundColor = UIColor.fb_mediumBlue()
+        bodyView.frame = self.view.frame
+        self.view.addSubview(bodyView)
+        
+        let tableView = BillTableView(frame: self.view.frame, style: UITableViewStyle.Plain)
+        tableView.delegate = self
+        
+        let tableViewWrapper = PullToBounceWrapper(scrollView: tableView)
+        bodyView.addSubview(tableViewWrapper)
+        tableViewWrapper.didPullToRefresh = {
+            dispatch_delay(2) {
+                tableViewWrapper.stopLoadingAnimation()
+            }
+        }
     }
-
-
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let velocity = scrollView.panGestureRecognizer.velocityInView(scrollView)
+        print(velocity.y)
+    }
     
 }

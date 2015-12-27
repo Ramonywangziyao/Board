@@ -8,18 +8,27 @@
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class BaseViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var segmentControl: UISegmentedControl!
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        mainScrollView.delegate = self
+        segmentControl.addTarget(self, action: "segmentControlDidChanged:", forControlEvents: UIControlEvents.ValueChanged)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func segmentControlDidChanged(segmentControl: UISegmentedControl) {
+        let point = CGPointMake(UIScreen.screenWidth * CGFloat(segmentControl.selectedSegmentIndex), 0)
+        mainScrollView.setContentOffset(point, animated: true)
     }
-
-
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        if scrollView == mainScrollView {
+            segmentControl.selectedSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.screenWidth)
+        }
+    }
+    
 }
 

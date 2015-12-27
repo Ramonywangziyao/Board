@@ -42,9 +42,10 @@
 		8822A0CA1C2F0EF4007D66DB /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8822A0C81C2F0EF4007D66DB /* Menu.storyboard */; };
 		8822A0CC1C2F107D007D66DB /* DefaultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0CB1C2F107D007D66DB /* DefaultConstants.swift */; };
 		8822A0CE1C2F55F9007D66DB /* BillEmptyDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0CD1C2F55F9007D66DB /* BillEmptyDataExtension.swift */; };
-		8822A0D01C2F561F007D66DB /* BillTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0CF1C2F561F007D66DB /* BillTableViewExtension.swift */; };
 		8822A0D71C2F5712007D66DB /* empty_box_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8822A0D61C2F5712007D66DB /* empty_box_img@2x.png */; };
 		882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */; };
+		882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */; };
+		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,9 +108,10 @@
 		8822A0C91C2F0EF4007D66DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Menu.storyboard; sourceTree = "<group>"; };
 		8822A0CB1C2F107D007D66DB /* DefaultConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultConstants.swift; sourceTree = "<group>"; };
 		8822A0CD1C2F55F9007D66DB /* BillEmptyDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillEmptyDataExtension.swift; sourceTree = "<group>"; };
-		8822A0CF1C2F561F007D66DB /* BillTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewExtension.swift; sourceTree = "<group>"; };
 		8822A0D61C2F5712007D66DB /* empty_box_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_box_img@2x.png"; sourceTree = "<group>"; };
 		882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYCGRectExtension.swift; sourceTree = "<group>"; };
+		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -210,8 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				8822A0331C2E8570007D66DB /* BaseViewController.swift */,
-				8822A0D11C2F5632007D66DB /* Bills */,
-				8822A0D31C2F56B8007D66DB /* Balance */,
+				8822A05F1C2E885C007D66DB /* BillViewController.swift */,
+				8822A0611C2E886C007D66DB /* BalanceViewController.swift */,
 				8822A0D21C2F56AB007D66DB /* Menu */,
 			);
 			name = Controllers;
@@ -236,7 +238,9 @@
 		8822A0681C2E88CD007D66DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				882FD2C51C2F8380008B2E95 /* BillTableView.swift */,
 				882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */,
+				8822A0CD1C2F55F9007D66DB /* BillEmptyDataExtension.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -280,18 +284,9 @@
 				8822A0AC1C2E8B36007D66DB /* WYExtensionUIScreen.swift */,
 				8822A0AD1C2E8B36007D66DB /* WYExtensionUITextField.swift */,
 				8822A0AE1C2E8B36007D66DB /* WYExtensionUIView.swift */,
+				882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */,
 			);
 			path = WYExtensionUtil;
-			sourceTree = "<group>";
-		};
-		8822A0D11C2F5632007D66DB /* Bills */ = {
-			isa = PBXGroup;
-			children = (
-				8822A05F1C2E885C007D66DB /* BillViewController.swift */,
-				8822A0CF1C2F561F007D66DB /* BillTableViewExtension.swift */,
-				8822A0CD1C2F55F9007D66DB /* BillEmptyDataExtension.swift */,
-			);
-			name = Bills;
 			sourceTree = "<group>";
 		};
 		8822A0D21C2F56AB007D66DB /* Menu */ = {
@@ -301,14 +296,6 @@
 				8822A0C61C2F0E68007D66DB /* LeftMenuViewController.swift */,
 			);
 			name = Menu;
-			sourceTree = "<group>";
-		};
-		8822A0D31C2F56B8007D66DB /* Balance */ = {
-			isa = PBXGroup;
-			children = (
-				8822A0611C2E886C007D66DB /* BalanceViewController.swift */,
-			);
-			name = Balance;
 			sourceTree = "<group>";
 		};
 		8822A0D41C2F56FA007D66DB /* Images */ = {
@@ -533,14 +520,15 @@
 				8822A0651C2E8895007D66DB /* WebService.swift in Sources */,
 				8822A0C71C2F0E68007D66DB /* LeftMenuViewController.swift in Sources */,
 				8822A0B91C2E8B36007D66DB /* WYExtensionString.swift in Sources */,
-				8822A0D01C2F561F007D66DB /* BillTableViewExtension.swift in Sources */,
 				8822A0BF1C2E8B36007D66DB /* WYExtensionUIScreen.swift in Sources */,
 				8822A0B51C2E8B36007D66DB /* WYExtensionImageLoader.swift in Sources */,
 				8822A0BB1C2E8B36007D66DB /* WYExtensionUIColor.swift in Sources */,
 				8822A0B71C2E8B36007D66DB /* WYExtensionNSUserDefault.swift in Sources */,
 				8822A0CC1C2F107D007D66DB /* DefaultConstants.swift in Sources */,
 				8822A0BD1C2E8B36007D66DB /* WYExtensionUIImageView.swift in Sources */,
+				882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */,
 				8822A0B61C2E8B36007D66DB /* WYExtensionNSDate.swift in Sources */,
+				882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */,
 				8822A0B11C2E8B36007D66DB /* WYExtensionArchiving.swift in Sources */,
 				8822A0AF1C2E8B36007D66DB /* Async.swift in Sources */,
 				8822A0621C2E886C007D66DB /* BalanceViewController.swift in Sources */,

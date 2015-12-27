@@ -10,8 +10,6 @@ import UIKit
 
 class BillTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var backView: UIView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
