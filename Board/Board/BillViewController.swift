@@ -11,7 +11,7 @@ import PullToBounce
 import AMScrollingNavbar
 import SnapKit
 
-class BillViewController: UIViewController, ScrollingNavigationControllerDelegate {
+class BillViewController: UIViewController {
 
     var tableView: BillTableView!
     
@@ -31,7 +31,7 @@ class BillViewController: UIViewController, ScrollingNavigationControllerDelegat
         tableView.emptyDataSetDelegate = self
         
         // setup the pull to Bounce
-        let tableViewWrapper = PullToBounceWrapper(scrollView: tableView)
+        let tableViewWrapper = PullToBounceWrapper(scrollView: tableView, pullDistance: 80)
         bodyView.addSubview(tableViewWrapper)
         tableViewWrapper.didPullToRefresh = {
             dispatch_delay(2) {
@@ -49,22 +49,19 @@ class BillViewController: UIViewController, ScrollingNavigationControllerDelegat
         super.viewDidAppear(animated)
         if let navigationController = self.navigationController as? ScrollingNavigationController {
             navigationController.followScrollView(tableView, delay: 50.0)
-            navigationController.scrollingNavbarDelegate = self
+            let scrollView = (self.parentViewController as! BaseViewController).mainScrollView
+            scrollView.snp_makeConstraints { (make) -> Void in
+                make.top.equalTo(navigationController.navigationBar.snp_bottom)
+                make.bottom.equalTo(view.snp_bottom)
+            }
         }
+        
     }
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         if let navigationController = self.navigationController as? ScrollingNavigationController {
             navigationController.stopFollowingScrollView()
-        }
-    }
-   
-    func scrollingNavigationController(controller: ScrollingNavigationController, didChangeState state: NavigationBarState) {
-        let scrollView = (self.parentViewController as! BaseViewController).mainScrollView
-        scrollView.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(controller.navigationBar.snp_bottom)
-            make.bottom.equalTo(view.snp_bottom)
         }
     }
     
