@@ -9,7 +9,7 @@
 import UIKit
 import DZNEmptyDataSet
 
-extension BillTableView: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+extension BillViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
     func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
         return UIImage(named: "empty_box_img")

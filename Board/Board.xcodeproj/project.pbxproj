@@ -46,6 +46,7 @@
 		882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */; };
 		882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */; };
 		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
+		882FD2D21C2F8E06008B2E95 /* BillTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYCGRectExtension.swift; sourceTree = "<group>"; };
 		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
+		882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewExtension.swift; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,9 +213,9 @@
 		8822A0631C2E8873007D66DB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8822A0331C2E8570007D66DB /* BaseViewController.swift */,
-				8822A05F1C2E885C007D66DB /* BillViewController.swift */,
-				8822A0611C2E886C007D66DB /* BalanceViewController.swift */,
+				882FD2D51C2F8FB6008B2E95 /* Base */,
+				882FD2D31C2F8FA1008B2E95 /* Bill */,
+				882FD2D41C2F8FAD008B2E95 /* Balance */,
 				8822A0D21C2F56AB007D66DB /* Menu */,
 			);
 			name = Controllers;
@@ -240,7 +242,6 @@
 			children = (
 				882FD2C51C2F8380008B2E95 /* BillTableView.swift */,
 				882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */,
-				8822A0CD1C2F55F9007D66DB /* BillEmptyDataExtension.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -312,6 +313,32 @@
 				8822A0D61C2F5712007D66DB /* empty_box_img@2x.png */,
 			);
 			name = Bills;
+			sourceTree = "<group>";
+		};
+		882FD2D31C2F8FA1008B2E95 /* Bill */ = {
+			isa = PBXGroup;
+			children = (
+				8822A05F1C2E885C007D66DB /* BillViewController.swift */,
+				882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */,
+				8822A0CD1C2F55F9007D66DB /* BillEmptyDataExtension.swift */,
+			);
+			name = Bill;
+			sourceTree = "<group>";
+		};
+		882FD2D41C2F8FAD008B2E95 /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				8822A0611C2E886C007D66DB /* BalanceViewController.swift */,
+			);
+			name = Balance;
+			sourceTree = "<group>";
+		};
+		882FD2D51C2F8FB6008B2E95 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8822A0331C2E8570007D66DB /* BaseViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		A2A6A6DC28C108286191AD84 /* Frameworks */ = {
@@ -532,6 +559,7 @@
 				8822A0B11C2E8B36007D66DB /* WYExtensionArchiving.swift in Sources */,
 				8822A0AF1C2E8B36007D66DB /* Async.swift in Sources */,
 				8822A0621C2E886C007D66DB /* BalanceViewController.swift in Sources */,
+				882FD2D21C2F8E06008B2E95 /* BillTableViewExtension.swift in Sources */,
 				8822A0B41C2E8B36007D66DB /* WYExtensionGCD.swift in Sources */,
 				8822A0BE1C2E8B36007D66DB /* WYExtensionUILabel.swift in Sources */,
 				8822A0B21C2E8B36007D66DB /* WYExtensionCollectionType.swift in Sources */,

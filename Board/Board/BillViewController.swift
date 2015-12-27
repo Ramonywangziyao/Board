@@ -9,7 +9,7 @@
 import UIKit
 import PullToBounce
 
-class BillViewController: UIViewController, UITableViewDelegate {
+class BillViewController: UIViewController {
 
     var tableView: BillTableView!
     
@@ -22,6 +22,9 @@ class BillViewController: UIViewController, UITableViewDelegate {
         
         let tableView = BillTableView(frame: self.view.frame, style: UITableViewStyle.Plain)
         tableView.delegate = self
+        tableView.dataSource = self
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
         
         let tableViewWrapper = PullToBounceWrapper(scrollView: tableView)
         bodyView.addSubview(tableViewWrapper)
@@ -30,11 +33,6 @@ class BillViewController: UIViewController, UITableViewDelegate {
                 tableViewWrapper.stopLoadingAnimation()
             }
         }
-    }
-    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        let velocity = scrollView.panGestureRecognizer.velocityInView(scrollView)
-        print(velocity.y)
     }
     
 }
