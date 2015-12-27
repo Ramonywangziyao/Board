@@ -20,13 +20,13 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func segmentControlDidChanged(segmentControl: UISegmentedControl) {
-        let point = CGPointMake(UIScreen.screenWidth * CGFloat(segmentControl.selectedSegmentIndex), 0)
+        let point = CGPointMake(UIScreen.mainScreenWidth * CGFloat(segmentControl.selectedSegmentIndex), 0)
         mainScrollView.setContentOffset(point, animated: true)
     }
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         if scrollView == mainScrollView {
-            segmentControl.selectedSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.screenWidth)
+            segmentControl.selectedSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.mainScreenWidth)
         }
     }
     
