@@ -17,6 +17,7 @@ class BillTableView: UITableView {
         self.separatorStyle = UITableViewCellSeparatorStyle.None
         self.backgroundColor = UIColor.fb_white()
         self.tableFooterView = UIView()
+        self.showsVerticalScrollIndicator = false
     }
     
     required init?(coder aDecoder: NSCoder) {

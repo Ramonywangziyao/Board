@@ -12,7 +12,7 @@ pod 'TextFieldEffects'
 pod 'JTSImageViewController'
 pod 'CRToast'
 pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift2'
-pod 'JZNavigationExtension'
+pod 'AMScrollingNavbar'
 
 pod 'PullToBounce'
 pod 'DZNEmptyDataSet'
