@@ -11,7 +11,7 @@ import PullToBounce
 import AMScrollingNavbar
 import SnapKit
 
-class BillViewController: UIViewController {
+class BillViewController: UIViewController, ScrollingNavigationControllerDelegate {
 
     var tableView: BillTableView!
     
@@ -31,7 +31,7 @@ class BillViewController: UIViewController {
         tableView.emptyDataSetDelegate = self
         
         // setup the pull to Bounce
-        let tableViewWrapper = PullToBounceWrapper(scrollView: tableView, pullDistance: 80)
+        let tableViewWrapper = PullToBounceWrapper(scrollView: tableView, pullDistance: 88)
         bodyView.addSubview(tableViewWrapper)
         tableViewWrapper.didPullToRefresh = {
             dispatch_delay(2) {
@@ -49,10 +49,11 @@ class BillViewController: UIViewController {
         super.viewDidAppear(animated)
         if let navigationController = self.navigationController as? ScrollingNavigationController {
             navigationController.followScrollView(tableView, delay: 50.0)
+//            navigationController.scrollingNavbarDelegate = self
             let scrollView = (self.parentViewController as! BaseViewController).mainScrollView
             scrollView.snp_makeConstraints { (make) -> Void in
                 make.top.equalTo(navigationController.navigationBar.snp_bottom)
-                make.bottom.equalTo(view.snp_bottom)
+                make.bottom.equalTo(self.view.snp_bottom)
             }
         }
         
@@ -64,5 +65,10 @@ class BillViewController: UIViewController {
             navigationController.stopFollowingScrollView()
         }
     }
+    
+//    func scrollingNavigationController(controller: ScrollingNavigationController, didChangeState state: NavigationBarState) {
+//        let scrollView = (self.parentViewController as! BaseViewController).mainScrollView
+//        scrollView.frame.y = controller.navigationBar.frame.bottom
+//    }
     
 }
