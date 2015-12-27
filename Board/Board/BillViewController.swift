@@ -26,6 +26,9 @@ class BillViewController: UIViewController {
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         
+        tableView.estimatedRowHeight = 120
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         let tableViewWrapper = PullToBounceWrapper(scrollView: tableView)
         bodyView.addSubview(tableViewWrapper)
         tableViewWrapper.didPullToRefresh = {
