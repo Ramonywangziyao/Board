@@ -17,6 +17,7 @@ class BillTableView: UITableView {
         self.separatorStyle = UITableViewCellSeparatorStyle.None
         self.backgroundColor = UIColor(hexCode: "#E9EAED")
         self.contentInset = UIEdgeInsetsMake(0, 0, Constants.EntireBarHeight + 4, 0)
+        self.tableFooterView = UIView()
     }
     
     required init?(coder aDecoder: NSCoder) {

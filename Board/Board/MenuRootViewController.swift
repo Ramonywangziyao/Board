@@ -27,7 +27,7 @@ class MenuRootViewController: RESideMenu, RESideMenuDelegate {
         self.contentViewShadowRadius = 12;
         self.contentViewShadowEnabled = true;
         self.contentViewScaleValue = 0.88
-        self.contentViewInPortraitOffsetCenterX = self.contentViewController.view.center.x - 108
+        self.contentViewInPortraitOffsetCenterX = self.contentViewController.view.centerX - UIScreen.mainScreenWidth / 3
     }
 
 }

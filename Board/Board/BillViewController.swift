@@ -9,9 +9,6 @@
 import UIKit
 import PullToBounce
 import AMScrollingNavbar
-import SnapKit
-
-//
 
 class BillViewController: UIViewController {
 
@@ -19,7 +16,7 @@ class BillViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // for pull to bounce
+        // body view for pull to bounce
         let bodyView = UIView()
         bodyView.backgroundColor = UIColor.fb_mediumBlue()
         bodyView.frame = self.view.frame
@@ -32,7 +29,7 @@ class BillViewController: UIViewController {
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         
-        // setup the pull to Bounce
+        // setup pull to Bounce
         let tableViewWrapper = PullToBounceWrapper(scrollView: tableView, pullDistance: 88)
         bodyView.addSubview(tableViewWrapper)
         tableViewWrapper.didPullToRefresh = {
@@ -42,7 +39,7 @@ class BillViewController: UIViewController {
         }
         
         // self-adjust cell height
-        tableView.estimatedRowHeight = 120
+        tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         
     }

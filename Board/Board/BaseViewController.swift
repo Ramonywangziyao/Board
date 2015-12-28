@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BaseViewController.swift
 //  Board
 //
 //  Created by Wang Yu on 12/26/15.
@@ -9,14 +9,12 @@
 import UIKit
 import AMScrollingNavbar
 import Spring
-import ReactiveCocoa
 
 class BaseViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var topBarView: DesignableView!
-    @IBOutlet weak var leftMenuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
