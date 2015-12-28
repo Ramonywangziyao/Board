@@ -49,6 +49,7 @@
 		882FD2D21C2F8E06008B2E95 /* BillTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */; };
 		88B518811C312135009AE721 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518801C312135009AE721 /* camera@2x.png */; };
 		88B518851C312258009AE721 /* writeBill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518841C312258009AE721 /* writeBill@2x.png */; };
+		88B518891C3123A7009AE721 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518881C3123A7009AE721 /* menu@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewExtension.swift; sourceTree = "<group>"; };
 		88B518801C312135009AE721 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		88B518841C312258009AE721 /* writeBill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeBill@2x.png"; sourceTree = "<group>"; };
+		88B518881C3123A7009AE721 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -309,6 +311,7 @@
 				88B518801C312135009AE721 /* camera@2x.png */,
 				88B518841C312258009AE721 /* writeBill@2x.png */,
 				8822A0D61C2F5712007D66DB /* empty_box_img@2x.png */,
+				88B518881C3123A7009AE721 /* menu@2x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				8822A03C1C2E8570007D66DB /* LaunchScreen.storyboard in Resources */,
 				88B518811C312135009AE721 /* camera@2x.png in Resources */,
 				8822A0391C2E8570007D66DB /* Assets.xcassets in Resources */,
+				88B518891C3123A7009AE721 /* menu@2x.png in Resources */,
 				8822A0D71C2F5712007D66DB /* empty_box_img@2x.png in Resources */,
 				88B518851C312258009AE721 /* writeBill@2x.png in Resources */,
 				8822A0371C2E8570007D66DB /* Main.storyboard in Resources */,

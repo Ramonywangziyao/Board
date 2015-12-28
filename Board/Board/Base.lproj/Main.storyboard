@@ -24,16 +24,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-4r-nR9">
                                         <rect key="frame" x="0.0" y="0.0" width="750" height="603"/>
                                         <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-Av-UdY">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                                <connections>
-                                                    <segue destination="9Wb-KJ-1ZM" kind="embed" id="wvN-jI-c7k"/>
-                                                </connections>
-                                            </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QP3-Rj-EKj">
                                                 <rect key="frame" x="375" y="0.0" width="375" height="603"/>
                                                 <connections>
                                                     <segue destination="52g-m9-Wbn" kind="embed" id="rwB-Sc-x95"/>
+                                                </connections>
+                                            </containerView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-Av-UdY">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                                <connections>
+                                                    <segue destination="9Wb-KJ-1ZM" kind="embed" id="wvN-jI-c7k"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -174,7 +174,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="j7d-0n-9DZ">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="8Or-Ri-wmr">
+                        <barButtonItem key="leftBarButtonItem" image="menu.png" id="8Or-Ri-wmr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="menuButtonDidPressed:" destination="BYZ-38-t0r" id="y7l-V2-D4l"/>
@@ -260,6 +260,7 @@
     </scenes>
     <resources>
         <image name="camera.png" width="16" height="16"/>
+        <image name="menu.png" width="16" height="16"/>
         <image name="writeBill.png" width="16" height="16"/>
     </resources>
 </document>
