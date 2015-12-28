@@ -15,8 +15,7 @@ class BillTableView: UITableView {
         super.init(frame: frame, style: style)
         self.registerClass(BillTableViewCell.self, forCellReuseIdentifier: "BillTableViewCell")
         self.separatorStyle = UITableViewCellSeparatorStyle.None
-        self.backgroundColor = UIColor.fb_white()
-        self.tableFooterView = UIView()
+        self.backgroundColor = UIColor(hexCode: "#E9EAED")
         self.showsVerticalScrollIndicator = false
     }
     

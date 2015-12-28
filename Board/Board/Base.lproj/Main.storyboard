@@ -75,17 +75,102 @@
                                     <constraint firstAttribute="width" constant="16" id="jOi-Jd-oso"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-AE-n6P" customClass="DesignableView" customModule="Spring">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26w-7z-0nP" customClass="WYMaterialButton" customModule="WYMaterialButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                        <color key="tintColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                                        <state key="normal" title="Photo" image="camera.png">
+                                            <color key="titleColor" red="0.39995324611663818" green="0.40002685785293579" blue="0.39994865655899048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="materialColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="materialPressedColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4I-2u-v8I">
+                                        <rect key="frame" x="187" y="12" width="1" height="16"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="Ovp-E3-XKd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKF-Y3-mBJ" customClass="WYMaterialButton" customModule="WYMaterialButton">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="40"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
+                                        <state key="normal" title="Add Bill" image="writeBill.png">
+                                            <color key="titleColor" red="0.39995324611663818" green="0.40002685785293579" blue="0.39994865655899048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="materialColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="materialPressedColor">
+                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="H4I-2u-v8I" secondAttribute="bottom" constant="12" id="2sj-p3-jcZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="WKF-Y3-mBJ" secondAttribute="bottom" id="3jd-hb-TPR"/>
+                                    <constraint firstAttribute="height" constant="40" id="4Vb-ut-jto"/>
+                                    <constraint firstAttribute="bottom" secondItem="26w-7z-0nP" secondAttribute="bottom" id="D1Y-IG-eEP"/>
+                                    <constraint firstItem="26w-7z-0nP" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="DAD-Ux-uCn"/>
+                                    <constraint firstItem="H4I-2u-v8I" firstAttribute="centerX" secondItem="1u5-AE-n6P" secondAttribute="centerX" id="DkZ-pf-Dkz"/>
+                                    <constraint firstItem="H4I-2u-v8I" firstAttribute="leading" secondItem="26w-7z-0nP" secondAttribute="trailing" id="J1H-eF-tbQ"/>
+                                    <constraint firstItem="WKF-Y3-mBJ" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="OGx-zT-1nn"/>
+                                    <constraint firstAttribute="trailing" secondItem="WKF-Y3-mBJ" secondAttribute="trailing" id="qd1-i1-kIt"/>
+                                    <constraint firstItem="H4I-2u-v8I" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" constant="12" id="xOt-M0-O8R"/>
+                                    <constraint firstItem="WKF-Y3-mBJ" firstAttribute="leading" secondItem="H4I-2u-v8I" secondAttribute="trailing" id="xu5-Sh-MwL"/>
+                                    <constraint firstItem="26w-7z-0nP" firstAttribute="leading" secondItem="1u5-AE-n6P" secondAttribute="leading" id="zgY-of-Q56"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1u5-AE-n6P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0SU-H6-vjh"/>
                             <constraint firstItem="RJ8-ZA-fZu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CgD-6I-ZRP"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FUq-20-89V"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vhx-8L-Fxp" secondAttribute="bottom" id="FUy-4D-h4Q"/>
                             <constraint firstAttribute="trailing" secondItem="vhx-8L-Fxp" secondAttribute="trailing" id="GpU-h9-yoH"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hlj-T6-rZZ"/>
+                            <constraint firstAttribute="trailing" secondItem="1u5-AE-n6P" secondAttribute="trailing" id="Ze9-UA-rWZ"/>
+                            <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fw3-LA-Tq8"/>
+                            <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="RJ8-ZA-fZu" secondAttribute="trailing" id="mXQ-50-KMC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RJ8-ZA-fZu" secondAttribute="bottom" id="rpR-YP-yCG"/>
                             <constraint firstItem="RJ8-ZA-fZu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xQS-Jx-0ob"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mXQ-50-KMC"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="j7d-0n-9DZ">
                         <nil key="title"/>
@@ -104,14 +189,12 @@
                             </segments>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </segmentedControl>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="IJK-XR-SsS">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mainScrollView" destination="vhx-8L-Fxp" id="N8c-Jm-KEv"/>
                         <outlet property="segmentControl" destination="KBX-2p-7AF" id="X0R-XG-Uch"/>
+                        <outlet property="topBarView" destination="1u5-AE-n6P" id="25E-8s-4vu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -175,4 +258,8 @@
             <point key="canvasLocation" x="-282.5" y="349.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.png" width="16" height="16"/>
+        <image name="writeBill.png" width="16" height="16"/>
+    </resources>
 </document>

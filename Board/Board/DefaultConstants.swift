@@ -10,3 +10,7 @@ import UIKit
 
 let Menu = UIStoryboard(name: "Menu", bundle: nil)
 let Main = UIStoryboard(name: "Main", bundle: nil)
+
+struct Constants {
+    static let TopBarHeight: CGFloat = 40
+}

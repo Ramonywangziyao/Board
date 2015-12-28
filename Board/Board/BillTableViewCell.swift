@@ -16,26 +16,16 @@ class BillTableViewCell: UITableViewCell {
         self.contentView.backgroundColor = UIColor.clearColor()
         self.backgroundColor = UIColor.clearColor()
         
-        let iconMock = UIView()
-        iconMock.backgroundColor = UIColor.fb_lightBlue()
-        iconMock.frame = CGRect(x: 16, y: 16, width: 60, height: 60)
-        iconMock.layer.cornerRadius = 10
-        self.addSubview(iconMock)
-        
-        let lineLeft:CGFloat = iconMock.frame.right + 16
-        let lineMargin:CGFloat = 12
-        
-        let line1 = CGRect(x: lineLeft, y: 12 + lineMargin, width: 100, height: 6)
-        let line2 = CGRect(x: lineLeft, y: line1.bottom + lineMargin, width: 160, height: 5)
-        let line3 = CGRect(x: lineLeft, y: line2.bottom + lineMargin, width: 180, height: 5)
-        addLine(line1)
-        addLine(line2)
-        addLine(line3)
-        
-        let sepalator = UIView()
-        sepalator.frame = CGRect(x: 0, y: 92 - 1, width: frame.width, height: 1)
-        sepalator.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.2)
-        self.addSubview(sepalator)
+        let view = UIView()
+        view.backgroundColor = UIColor.fb_white()
+        self.addSubview(view)
+        view.snp_makeConstraints { make in
+            make.top.equalTo(self.snp_top).offset(8)
+            make.left.equalTo(self.snp_left).offset(8)
+            make.right.equalTo(self.snp_right).offset(-8)
+            make.bottom.equalTo(self.snp_bottom)
+        }
+        fakeView(view)
     }
     
     
@@ -43,12 +33,32 @@ class BillTableViewCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    func addLine(frame:CGRect) {
-        let line = UIView(frame:frame)
-        line.layer.cornerRadius = frame.height / 2
-        line.backgroundColor = UIColor.fb_lightBlue()
-        self.addSubview(line)
+    func fakeView(view: UIView) {
+        let iconMock = UIView()
+        iconMock.backgroundColor = UIColor.fb_lightBlue()
+        iconMock.frame = CGRect(x: 16, y: 16, width: 60, height: 60)
+        iconMock.layer.cornerRadius = 10
+        view.addSubview(iconMock)
+        
+        let lineLeft:CGFloat = iconMock.frame.right + 16
+        let lineMargin:CGFloat = 12
+        
+        let line1 = CGRect(x: lineLeft, y: 12 + lineMargin, width: 100, height: 6)
+        let line2 = CGRect(x: lineLeft, y: line1.bottom + lineMargin, width: 160, height: 5)
+        let line3 = CGRect(x: lineLeft, y: line2.bottom + lineMargin, width: 180, height: 5)
+        func addLine(frame:CGRect) {
+            let line = UIView(frame:frame)
+            line.layer.cornerRadius = frame.height / 2
+            line.backgroundColor = UIColor.fb_lightBlue()
+            view.addSubview(line)
+        }
+        addLine(line1)
+        addLine(line2)
+        addLine(line3)
+        
     }
+    
+
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
