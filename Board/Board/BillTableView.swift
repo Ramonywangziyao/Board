@@ -16,7 +16,7 @@ class BillTableView: UITableView {
         self.registerClass(BillTableViewCell.self, forCellReuseIdentifier: "BillTableViewCell")
         self.separatorStyle = UITableViewCellSeparatorStyle.None
         self.backgroundColor = UIColor(hexCode: "#E9EAED")
-        self.showsVerticalScrollIndicator = false
+        self.contentInset = UIEdgeInsetsMake(0, 0, Constants.EntireBarHeight + 4, 0)
     }
     
     required init?(coder aDecoder: NSCoder) {

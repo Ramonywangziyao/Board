@@ -229,8 +229,33 @@
                     <view key="view" contentMode="scaleToFill" id="agp-mE-x2K">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B11-It-axF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BalanceTableViewCell" rowHeight="100" id="fmR-1A-Zmi" customClass="BalanceTableViewCell" customModule="Board" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fmR-1A-Zmi" id="vIf-fi-dpj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="B11-It-axF" firstAttribute="top" secondItem="ofZ-xe-Zvt" secondAttribute="bottom" id="8TI-jj-7I8"/>
+                            <constraint firstItem="BY5-Jb-n9N" firstAttribute="top" secondItem="B11-It-axF" secondAttribute="bottom" id="Hhz-GP-Dq9"/>
+                            <constraint firstAttribute="trailing" secondItem="B11-It-axF" secondAttribute="trailing" id="Sbf-bw-xlm"/>
+                            <constraint firstItem="B11-It-axF" firstAttribute="leading" secondItem="agp-mE-x2K" secondAttribute="leading" id="lOs-iJ-CGz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="B11-It-axF" id="RRL-t9-Xx7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdF-me-eou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

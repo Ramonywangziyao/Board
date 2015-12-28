@@ -13,4 +13,7 @@ let Main = UIStoryboard(name: "Main", bundle: nil)
 
 struct Constants {
     static let TopBarHeight: CGFloat = 40
+    static let EntireBarHeight: CGFloat = 64
+    static let NavBarHeight: CGFloat = 44
+    static let StatusBarHieght: CGFloat = 20
 }

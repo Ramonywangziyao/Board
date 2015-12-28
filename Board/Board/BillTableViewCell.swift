@@ -13,6 +13,7 @@ class BillTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .None
         self.contentView.backgroundColor = UIColor.clearColor()
         self.backgroundColor = UIColor.clearColor()
         
@@ -24,6 +25,7 @@ class BillTableViewCell: UITableViewCell {
             make.left.equalTo(self.snp_left).offset(8)
             make.right.equalTo(self.snp_right).offset(-8)
             make.bottom.equalTo(self.snp_bottom)
+            make.height.equalTo(92)
         }
         fakeView(view)
     }
@@ -55,7 +57,6 @@ class BillTableViewCell: UITableViewCell {
         addLine(line1)
         addLine(line2)
         addLine(line3)
-        
     }
     
 
