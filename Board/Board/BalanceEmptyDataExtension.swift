@@ -12,7 +12,7 @@ import DZNEmptyDataSet
 extension BalanceViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
     func imageForEmptyDataSet(scrollView: UIScrollView!) -> UIImage! {
-        return UIImage(named: "empty_box_img")
+        return UIImage(named: "empty_people_img")
     }
     
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {

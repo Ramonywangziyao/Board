@@ -53,6 +53,7 @@
 		88B5188C1C31294E009AE721 /* BalanceEmptyDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5188A1C31294E009AE721 /* BalanceEmptyDataExtension.swift */; };
 		88B5188D1C31294E009AE721 /* BalanceTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5188B1C31294E009AE721 /* BalanceTableViewExtension.swift */; };
 		88B518911C312AEF009AE721 /* BalanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B518901C312AEF009AE721 /* BalanceTableViewCell.swift */; };
+		88B518931C312D49009AE721 /* empty_people_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518921C312D49009AE721 /* empty_people_img@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		88B5188A1C31294E009AE721 /* BalanceEmptyDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceEmptyDataExtension.swift; sourceTree = "<group>"; };
 		88B5188B1C31294E009AE721 /* BalanceTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceTableViewExtension.swift; sourceTree = "<group>"; };
 		88B518901C312AEF009AE721 /* BalanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCell.swift; sourceTree = "<group>"; };
+		88B518921C312D49009AE721 /* empty_people_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_people_img@2x.png"; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -318,6 +320,7 @@
 				88B518801C312135009AE721 /* camera@2x.png */,
 				88B518841C312258009AE721 /* writeBill@2x.png */,
 				8822A0D61C2F5712007D66DB /* empty_box_img@2x.png */,
+				88B518921C312D49009AE721 /* empty_people_img@2x.png */,
 				88B518881C3123A7009AE721 /* menu@2x.png */,
 			);
 			name = Images;
@@ -469,6 +472,7 @@
 				8822A03C1C2E8570007D66DB /* LaunchScreen.storyboard in Resources */,
 				88B518811C312135009AE721 /* camera@2x.png in Resources */,
 				8822A0391C2E8570007D66DB /* Assets.xcassets in Resources */,
+				88B518931C312D49009AE721 /* empty_people_img@2x.png in Resources */,
 				88B518891C3123A7009AE721 /* menu@2x.png in Resources */,
 				8822A0D71C2F5712007D66DB /* empty_box_img@2x.png in Resources */,
 				88B518851C312258009AE721 /* writeBill@2x.png in Resources */,
