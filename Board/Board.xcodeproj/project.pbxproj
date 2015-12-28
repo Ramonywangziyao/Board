@@ -128,6 +128,7 @@
 		88B5188B1C31294E009AE721 /* BalanceTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceTableViewExtension.swift; sourceTree = "<group>"; };
 		88B518901C312AEF009AE721 /* BalanceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceTableViewCell.swift; sourceTree = "<group>"; };
 		88B518921C312D49009AE721 /* empty_people_img@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty_people_img@2x.png"; sourceTree = "<group>"; };
+		88B518941C31B3E5009AE721 /* Board-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Board-Bridging-Header.h"; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +200,7 @@
 				8822A0981C2E8AF8007D66DB /* Utils */,
 				8822A0D41C2F56FA007D66DB /* Images */,
 				8822A0311C2E8570007D66DB /* AppDelegate.swift */,
+				88B518941C31B3E5009AE721 /* Board-Bridging-Header.h */,
 				8822A0381C2E8570007D66DB /* Assets.xcassets */,
 				8822A03A1C2E8570007D66DB /* LaunchScreen.storyboard */,
 				8822A03D1C2E8570007D66DB /* Info.plist */,
@@ -735,10 +737,13 @@
 			baseConfigurationReference = F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Board/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yu-Wang.Board";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Board/Board-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -747,10 +752,12 @@
 			baseConfigurationReference = 57F84606F108D0485A165D7C /* Pods-Board.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Board/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Yu-Wang.Board";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Board/Board-Bridging-Header.h";
 			};
 			name = Release;
 		};
