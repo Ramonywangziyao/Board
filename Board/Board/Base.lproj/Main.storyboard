@@ -194,6 +194,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="leftMenuButton" destination="8Or-Ri-wmr" id="5Ka-6Q-bjX"/>
                         <outlet property="mainScrollView" destination="vhx-8L-Fxp" id="N8c-Jm-KEv"/>
                         <outlet property="segmentControl" destination="KBX-2p-7AF" id="X0R-XG-Uch"/>
                         <outlet property="topBarView" destination="1u5-AE-n6P" id="25E-8s-4vu"/>
