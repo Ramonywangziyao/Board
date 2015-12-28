@@ -51,11 +51,6 @@ class BillViewController: UIViewController {
         super.viewDidAppear(animated)
         if let navigationController = self.navigationController as? ScrollingNavigationController {
             navigationController.followScrollView(tableView, delay: 50.0)
-            let scrollView = (self.parentViewController as! BaseViewController).mainScrollView
-            scrollView.snp_makeConstraints { make in
-                make.top.equalTo(navigationController.navigationBar.snp_bottom).offset(Constants.TopBarHeight)
-                make.bottom.equalTo(self.view.snp_bottom)
-            }
         }
         
     }

@@ -19,19 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhx-8L-Fxp">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-4r-nR9">
-                                        <rect key="frame" x="0.0" y="0.0" width="750" height="603"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="750" height="563"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QP3-Rj-EKj">
-                                                <rect key="frame" x="375" y="0.0" width="375" height="603"/>
+                                                <rect key="frame" x="375" y="0.0" width="375" height="563"/>
                                                 <connections>
                                                     <segue destination="52g-m9-Wbn" kind="embed" id="rwB-Sc-x95"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcI-Av-UdY">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                                                 <connections>
                                                     <segue destination="9Wb-KJ-1ZM" kind="embed" id="wvN-jI-c7k"/>
                                                 </connections>
@@ -125,7 +125,7 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="H4I-2u-v8I" secondAttribute="bottom" constant="12" id="2sj-p3-jcZ"/>
                                     <constraint firstAttribute="bottom" secondItem="WKF-Y3-mBJ" secondAttribute="bottom" id="3jd-hb-TPR"/>
-                                    <constraint firstAttribute="height" constant="40" id="4Vb-ut-jto"/>
+                                    <constraint firstAttribute="height" constant="40" placeholder="YES" id="4Vb-ut-jto"/>
                                     <constraint firstAttribute="bottom" secondItem="26w-7z-0nP" secondAttribute="bottom" id="D1Y-IG-eEP"/>
                                     <constraint firstItem="26w-7z-0nP" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="DAD-Ux-uCn"/>
                                     <constraint firstItem="H4I-2u-v8I" firstAttribute="centerX" secondItem="1u5-AE-n6P" secondAttribute="centerX" id="DkZ-pf-Dkz"/>
@@ -154,14 +154,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1u5-AE-n6P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0SU-H6-vjh"/>
+                            <constraint firstItem="1u5-AE-n6P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" placeholder="YES" id="0SU-H6-vjh"/>
                             <constraint firstItem="RJ8-ZA-fZu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CgD-6I-ZRP"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FUq-20-89V"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vhx-8L-Fxp" secondAttribute="bottom" id="FUy-4D-h4Q"/>
                             <constraint firstAttribute="trailing" secondItem="vhx-8L-Fxp" secondAttribute="trailing" id="GpU-h9-yoH"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hlj-T6-rZZ"/>
-                            <constraint firstAttribute="trailing" secondItem="1u5-AE-n6P" secondAttribute="trailing" id="Ze9-UA-rWZ"/>
-                            <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fw3-LA-Tq8"/>
+                            <constraint firstAttribute="trailing" secondItem="1u5-AE-n6P" secondAttribute="trailing" placeholder="YES" id="Ze9-UA-rWZ"/>
+                            <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" placeholder="YES" id="fw3-LA-Tq8"/>
+                            <constraint firstItem="vhx-8L-Fxp" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="bottom" id="hZG-ud-Xc9"/>
                             <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="RJ8-ZA-fZu" secondAttribute="trailing" id="mXQ-50-KMC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RJ8-ZA-fZu" secondAttribute="bottom" id="rpR-YP-yCG"/>
                             <constraint firstItem="RJ8-ZA-fZu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xQS-Jx-0ob"/>
@@ -169,6 +170,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="mXQ-50-KMC"/>
+                                <exclude reference="Hlj-T6-rZZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -210,7 +212,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YhK-PN-TCv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fZl-5T-Cti">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </viewController>
@@ -227,11 +229,11 @@
                         <viewControllerLayoutGuide type="bottom" id="BY5-Jb-n9N"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="agp-mE-x2K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B11-It-axF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BalanceTableViewCell" rowHeight="100" id="fmR-1A-Zmi" customClass="BalanceTableViewCell" customModule="Board" customModuleProvider="target">
