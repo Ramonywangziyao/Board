@@ -40,7 +40,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             if succ {
                 print(UserInfo.getUserName())
                 print(UserInfo.getUserEmail())
-                print(UserInfo.getUserPortrait()!)
+                print(UserInfo.getUserPortrait())
+                print(UserInfo.getUserCoverPhoto())
                 self.performSegueWithIdentifier(SegueKeys.Login, sender: loginButton)
             } else {
                 print("Login Failed!")

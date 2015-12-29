@@ -13,9 +13,15 @@ import FBSDKCoreKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var initViewController: UIViewController!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        initViewController = UserInfo.isLoggedIn()
+            ? StartStoryboard.instantiateViewControllerWithIdentifier(ViewControllerIdentifier.RootView)
+            : StartStoryboard.instantiateViewControllerWithIdentifier(ViewControllerIdentifier.Login)
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = initViewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 

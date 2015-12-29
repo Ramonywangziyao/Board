@@ -356,8 +356,8 @@
 		882FD2D51C2F8FB6008B2E95 /* Start */ = {
 			isa = PBXGroup;
 			children = (
-				8822A0331C2E8570007D66DB /* BaseViewController.swift */,
 				88B518971C321871009AE721 /* LoginViewController.swift */,
+				8822A0331C2E8570007D66DB /* BaseViewController.swift */,
 			);
 			name = Start;
 			sourceTree = "<group>";

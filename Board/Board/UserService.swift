@@ -26,23 +26,35 @@ class UserService: NSObject {
         return userDefault.stringForKey(UserKeys.Email) ?? ""
     }
     
-    func getUserPortrait() -> NSURL? {
-        return userDefault.URLForKey(UserKeys.Portrait)
+    func getUserPortrait() -> String {
+        return userDefault.stringForKey(UserKeys.Portrait) ?? ""
+    }
+    
+    func getUserId() -> String {
+        return userDefault.stringForKey(UserKeys.Id) ?? ""
+    }
+    
+    func getUserCoverPhoto() -> String {
+        return userDefault.stringForKey(UserKeys.CoverPhoto) ?? ""
+    }
+    
+    lazy var isLoggedIn: () -> Bool = {
+        return self.getUserId() != ""
     }
     
     func facebookLogin(token: String, completion:(succ: Bool, error: String?, result: [String: AnyObject]?) -> ()) {
-        print(token)
         if FBSDKAccessToken.currentAccessToken() != nil {
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, picture.type(large)"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, picture.type(normal), cover"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if error == nil {
                     print(result)
                     self.userDefault.setObject(result["id"], forKey: UserKeys.Id)
                     self.userDefault.setObject(result["name"], forKey: UserKeys.Name)
                     self.userDefault.setObject(result["email"], forKey: UserKeys.Email)
                     self.userDefault.setObject(((result["picture"]! as! [String: AnyObject])["data"]! as! [String: AnyObject])["url"]!, forKey: UserKeys.Portrait)
+                    self.userDefault.setObject((result["cover"] as! [String: AnyObject])["source"], forKey: UserKeys.CoverPhoto)
                     self.userDefault.synchronize()
+                    //TODO: upload facebook user data
                     completion(succ: true, error: nil, result: nil)
-                    // upload facebook user data
                 } else {
                     completion(succ: false, error: error.description, result: nil)
                 }

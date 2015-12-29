@@ -8,7 +8,7 @@
         <!--Menu Root View Controller-->
         <scene sceneID="bpe-1P-wEZ">
             <objects>
-                <viewController id="T1n-5M-TcL" customClass="MenuRootViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" id="T1n-5M-TcL" customClass="MenuRootViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qX9-bI-Ido"/>
                         <viewControllerLayoutGuide type="bottom" id="do8-8V-149"/>
@@ -46,7 +46,7 @@
         <!--Login View Controller-->
         <scene sceneID="8tL-yj-otf">
             <objects>
-                <viewController id="xCo-K7-hq7" customClass="LoginViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="xCo-K7-hq7" customClass="LoginViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4EC-xK-pGi"/>
                         <viewControllerLayoutGuide type="bottom" id="MYg-JE-rgk"/>

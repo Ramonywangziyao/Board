@@ -24,8 +24,16 @@ struct UserKeys {
     static let Token = "userToken"
     static let Email = "userEmail"
     static let Portrait = "userPortrait"
+    static let CoverPhoto = "userCoverPhoto"
 }
 
 struct SegueKeys {
     static let Login = "LoginSegue"
+}
+
+struct ViewControllerIdentifier {
+    static let ContentNav = "ContentNavigationController"
+    static let LeftMenu = "LeftMenuViewController"
+    static let Login = "LoginViewController"
+    static let RootView = "RootViewController"
 }
