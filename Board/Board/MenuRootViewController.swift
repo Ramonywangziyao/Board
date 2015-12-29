@@ -17,8 +17,8 @@ class MenuRootViewController: RESideMenu, RESideMenuDelegate {
     }
 
     override func awakeFromNib() {
-        self.contentViewController = Main.instantiateViewControllerWithIdentifier("ContentNavigationController") as! UINavigationController
-        self.leftMenuViewController = Menu.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
+        self.contentViewController = MainStoryboard.instantiateViewControllerWithIdentifier("ContentNavigationController") as! UINavigationController
+        self.leftMenuViewController = StartStoryboard.instantiateViewControllerWithIdentifier("LeftMenuViewController") as! LeftMenuViewController
         self.menuPreferredStatusBarStyle = UIStatusBarStyle.LightContent
     //    self.backgroundImage = UIImage(named: "menu_background.png")
         self.contentViewShadowColor = UIColor.blackColor();
