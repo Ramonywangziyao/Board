@@ -9,7 +9,6 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
-import FBSDKShareKit
 
 class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
@@ -23,16 +22,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.loginButton.delegate = self
         self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
         self.view.addSubview(self.loginButton)
-        
-        let content = FBSDKShareLinkContent()
-        content.contentURL = NSURL(string:"https://www.takefiveinteractive.com")
-        content.contentTitle = "This is a test hhahahhahaahha"
-        content.peopleIDs = ["739437159512298"]
-        let button = FBSDKShareButton()
-        button.center = CGPointMake(self.view.center.x, self.view.center.y + 48)
-        button.shareContent = content
-        button.userInteractionEnabled = true
-        self.view.addSubview(button)
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {

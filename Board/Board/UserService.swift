@@ -62,31 +62,6 @@ class UserService: NSObject {
         }
     }
     
-    var token = NSMutableArray()
-    
-    func getFriends() {
-        if FBSDKAccessToken.currentAccessToken() != nil {
-            FBSDKGraphRequest(graphPath: "/me/taggable_friends", parameters: nil).startWithCompletionHandler { (connection, result, error) -> Void in
-                if error == nil{
-                    print(result)
-                    for val in result["data"] as! [AnyObject]{
-                        self.token.addObject(val["id"] as! String)
-                    }
-                }
-            }
-        }
-    }
-    
-    func getMutualFriends() {
-        if FBSDKAccessToken.currentAccessToken() != nil {
-            FBSDKGraphRequest(graphPath: "/me/friends", parameters: ["fields":"name,installed,first_name"]).startWithCompletionHandler { (connection, result, error) -> Void in
-                if error == nil{
-                    print(result)
-                }
-            }
-        }
-    }
-    
     func logout() {
         userDefault.setNilValueForKey(UserKeys.Id)
         userDefault.setNilValueForKey(UserKeys.Email)
