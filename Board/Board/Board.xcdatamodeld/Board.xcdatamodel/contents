@@ -2,37 +2,37 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
     <entity name="Bill" syncable="YES">
         <attribute name="amounts" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="creator" optional="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isDiscarded" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isPaid" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="people" optional="YES" syncable="YES"/>
         <attribute name="photoId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="creator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" syncable="YES"/>
+        <relationship name="members" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Board" syncable="YES">
-        <attribute name="bills" optional="YES" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="creator" optional="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isActive" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="members" optional="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bills" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" syncable="YES"/>
+        <relationship name="creator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" syncable="YES"/>
+        <relationship name="members" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" syncable="YES"/>
     </entity>
     <entity name="Person" syncable="YES">
         <attribute name="accessToken" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="bills" optional="YES" syncable="YES"/>
-        <attribute name="boards" optional="YES" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="facebookId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastLoginAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="bills" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" syncable="YES"/>
+        <relationship name="boards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Board" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Bill" positionX="-63" positionY="-18" width="128" height="180"/>
-        <element name="Person" positionX="-54" positionY="63" width="128" height="150"/>
-        <element name="Board" positionX="-36" positionY="90" width="128" height="165"/>
+        <element name="Bill" positionX="-351" positionY="36" width="128" height="180"/>
+        <element name="Board" positionX="72" positionY="132" width="128" height="163"/>
+        <element name="Person" positionX="-162" positionY="-126" width="128" height="148"/>
     </elements>
 </model>

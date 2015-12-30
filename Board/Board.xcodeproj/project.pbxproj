@@ -46,6 +46,7 @@
 		88257B5B1C339C8F00B40B0F /* Bill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B5A1C339C8F00B40B0F /* Bill.swift */; };
 		88257B5D1C339CA300B40B0F /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B5C1C339CA300B40B0F /* Board.swift */; };
 		88257B5F1C339CAE00B40B0F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B5E1C339CAE00B40B0F /* Person.swift */; };
+		88257B651C33B06700B40B0F /* Board.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88257B631C33B06700B40B0F /* Board.xcdatamodeld */; };
 		882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */; };
 		882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */; };
 		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
@@ -125,6 +126,7 @@
 		88257B5A1C339C8F00B40B0F /* Bill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bill.swift; sourceTree = "<group>"; };
 		88257B5C1C339CA300B40B0F /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		88257B5E1C339CAE00B40B0F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		88257B641C33B06700B40B0F /* Board.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Board.xcdatamodel; sourceTree = "<group>"; };
 		882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYCGRectExtension.swift; sourceTree = "<group>"; };
 		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				88257B5A1C339C8F00B40B0F /* Bill.swift */,
 				88257B5C1C339CA300B40B0F /* Board.swift */,
 				88257B5E1C339CAE00B40B0F /* Person.swift */,
+				88257B631C33B06700B40B0F /* Board.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				8822A0651C2E8895007D66DB /* WebService.swift in Sources */,
 				8822A0C71C2F0E68007D66DB /* LeftMenuViewController.swift in Sources */,
 				8822A0B91C2E8B36007D66DB /* WYExtensionString.swift in Sources */,
+				88257B651C33B06700B40B0F /* Board.xcdatamodeld in Sources */,
 				8822A0BF1C2E8B36007D66DB /* WYExtensionUIScreen.swift in Sources */,
 				8822A0B51C2E8B36007D66DB /* WYExtensionImageLoader.swift in Sources */,
 				8822A0BB1C2E8B36007D66DB /* WYExtensionUIColor.swift in Sources */,
@@ -869,6 +873,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		88257B631C33B06700B40B0F /* Board.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88257B641C33B06700B40B0F /* Board.xcdatamodel */,
+			);
+			currentVersion = 88257B641C33B06700B40B0F /* Board.xcdatamodel */;
+			path = Board.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8822A0261C2E8570007D66DB /* Project object */;
 }
