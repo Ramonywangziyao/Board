@@ -8,20 +8,6 @@
 
 import UIKit
 
-/*
-    var billSchema = mongoose.Schema({
-    _id: {type: String, default: uuid.v4},
-    title: String,
-    description: String,
-    time: {type: Date, default: Date.now},
-    photoId: String,
-    amounts: [{person: {type: String, ref: 'Person'}, balance: Number}],
-    isPaid: Boolean,
-    creator: {type: String, ref: 'Person'},
-    isDeleted: {type: Boolean, default: false}
-    });
-*/
-
 class Bill: NSObject {
     
     var _id: String!

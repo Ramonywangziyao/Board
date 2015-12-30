@@ -8,19 +8,6 @@
 
 import UIKit
 
-/* 
-    var boardSchema = mongoose.Schema({
-    _id: {type: String, default: uuid.v4},
-    name: String,
-    isActive: {type: Boolean, default: true},
-    creator: {type: String, ref: 'Person'},
-    members: [{type: String, ref: 'Person'}],
-    bills: [{type: String, ref: 'Bill'}],
-    status: {type: String, default: 'Open'},  // indicate if board is being cleared
-    createdAt: {type: Date, default: Date.now}
-});
-*/
-
 class Board: NSObject {
     
     var _id: String!

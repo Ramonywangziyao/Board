@@ -8,18 +8,6 @@
 
 import UIKit
 
-/*
-    var personSchema = mongoose.Schema({
-    _id: {type: String, default: uuid.v4},
-    facebookId: String,
-    accessToken: String,
-    bills: [{type: String, ref: 'Bill'}],
-    boards: [{type: String, ref: 'Board'}],
-    createdAt: {type: Date, default: Date.now},
-    lastLoginAt: {type: Date, default: Date.now}
-    });
-*/
-
 class Person: NSObject {
     
     var _id: String!
