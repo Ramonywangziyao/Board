@@ -47,6 +47,7 @@
 		88257B5D1C339CA300B40B0F /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B5C1C339CA300B40B0F /* Board.swift */; };
 		88257B5F1C339CAE00B40B0F /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B5E1C339CAE00B40B0F /* Person.swift */; };
 		88257B691C34F1DC00B40B0F /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B681C34F1DC00B40B0F /* CellAnimator.swift */; };
+		88257B6D1C34FA1300B40B0F /* menu_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 88257B6C1C34FA1300B40B0F /* menu_background.png */; };
 		882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */; };
 		882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */; };
 		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
@@ -127,6 +128,7 @@
 		88257B5C1C339CA300B40B0F /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		88257B5E1C339CAE00B40B0F /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		88257B681C34F1DC00B40B0F /* CellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
+		88257B6C1C34FA1300B40B0F /* menu_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_background.png; sourceTree = "<group>"; };
 		882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYCGRectExtension.swift; sourceTree = "<group>"; };
 		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 		8822A0D41C2F56FA007D66DB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				88257B6C1C34FA1300B40B0F /* menu_background.png */,
 				88B518801C312135009AE721 /* camera@2x.png */,
 				88B518841C312258009AE721 /* writeBill@2x.png */,
 				8822A0D61C2F5712007D66DB /* empty_box_img@2x.png */,
@@ -498,6 +501,7 @@
 				88B518851C312258009AE721 /* writeBill@2x.png in Resources */,
 				8822A0371C2E8570007D66DB /* Main.storyboard in Resources */,
 				8822A0CA1C2F0EF4007D66DB /* Start.storyboard in Resources */,
+				88257B6D1C34FA1300B40B0F /* menu_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

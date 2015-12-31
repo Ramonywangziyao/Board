@@ -19,6 +19,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="interactivePopGestureRecognizerEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="fadeMenuView" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scaleBackgroundImageView" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="scaleMenuView" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="parallaxEnabled" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a4K-x2-T83" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -35,7 +42,7 @@
                     <view key="view" contentMode="scaleToFill" id="IDk-Aw-eHu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>

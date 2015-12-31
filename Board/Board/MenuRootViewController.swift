@@ -20,7 +20,7 @@ class MenuRootViewController: RESideMenu, RESideMenuDelegate {
         self.contentViewController = MainStoryboard.instantiateViewControllerWithIdentifier(ViewControllerIdentifier.ContentNav) as! UINavigationController
         self.leftMenuViewController = StartStoryboard.instantiateViewControllerWithIdentifier(ViewControllerIdentifier.LeftMenu) as! LeftMenuViewController
         self.menuPreferredStatusBarStyle = UIStatusBarStyle.LightContent
-    //    self.backgroundImage = UIImage(named: "menu_background.png")
+        self.backgroundImage = UIImage(named: "menu_background.png")
         self.contentViewShadowColor = UIColor.blackColor();
         self.contentViewShadowOffset = CGSizeMake(0, 0);
         self.contentViewShadowOpacity = 0.6;
