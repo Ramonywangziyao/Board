@@ -17,12 +17,80 @@
                     <view key="view" contentMode="scaleToFill" id="see-C4-aPX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Bill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-si-odN">
+                                <rect key="frame" x="0.0" y="28" width="375" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="328-26-Ak5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <color key="textColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bill Notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0sb-1A-W3O" customClass="JiroTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="60" width="343" height="72"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="U5t-vk-UJT"/>
+                                </constraints>
+                                <color key="textColor" red="0.22537201642990112" green="0.34264656901359558" blue="0.60412263870239258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bill Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-99-iHF" customClass="JiroTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="132" width="229" height="72"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="OUW-kC-dss"/>
+                                    <constraint firstAttribute="height" constant="40" id="cXJ-Vq-Djh"/>
+                                    <constraint firstAttribute="width" constant="200" id="yr6-h9-U1b"/>
+                                </constraints>
+                                <color key="textColor" red="0.22537201642990112" green="0.34264656901359558" blue="0.60412263870239258" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yr6-h9-U1b"/>
+                                        <exclude reference="OUW-kC-dss"/>
+                                        <exclude reference="cXJ-Vq-Djh"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.42374211549758911" green="0.51364630460739136" blue="0.71284264326095581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gxe-si-odN" firstAttribute="leading" secondItem="see-C4-aPX" secondAttribute="leading" id="6rE-8E-rrx"/>
+                            <constraint firstItem="0sb-1A-W3O" firstAttribute="top" secondItem="gxe-si-odN" secondAttribute="bottom" constant="8" id="Msd-Dr-b5e"/>
+                            <constraint firstItem="0sb-1A-W3O" firstAttribute="leading" secondItem="ePV-99-iHF" secondAttribute="leading" id="Nso-BU-2ZA"/>
+                            <constraint firstItem="ePV-99-iHF" firstAttribute="width" secondItem="0sb-1A-W3O" secondAttribute="width" multiplier="0.667" id="OdV-w1-9CS"/>
+                            <constraint firstAttribute="trailing" secondItem="0sb-1A-W3O" secondAttribute="trailing" constant="16" id="Owc-bH-vHK"/>
+                            <constraint firstAttribute="trailing" secondItem="gxe-si-odN" secondAttribute="trailing" id="R6f-Sg-qjR"/>
+                            <constraint firstItem="gxe-si-odN" firstAttribute="top" secondItem="jla-FU-TvI" secondAttribute="bottom" constant="8" id="V6F-zh-X7f"/>
+                            <constraint firstItem="ePV-99-iHF" firstAttribute="top" secondItem="0sb-1A-W3O" secondAttribute="bottom" id="ZT4-1H-iuQ"/>
+                            <constraint firstItem="0sb-1A-W3O" firstAttribute="leading" secondItem="see-C4-aPX" secondAttribute="leading" constant="16" id="caq-WM-X1V"/>
+                            <constraint firstItem="0sb-1A-W3O" firstAttribute="height" secondItem="ePV-99-iHF" secondAttribute="height" id="nMl-qM-eUj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayA-3A-3kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804.5" y="-46.5"/>
+            <point key="canvasLocation" x="769.5" y="349.5"/>
         </scene>
         <!--Base View Controller-->
         <scene sceneID="tne-QT-ifu">
