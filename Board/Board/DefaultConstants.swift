@@ -27,8 +27,9 @@ struct UserKeys {
     static let CoverPhoto = "userCoverPhoto"
 }
 
-struct SegueKeys {
+struct SegueIdentifier {
     static let Login = "LoginSegue"
+    static let AddBill = "AddBillSegue"
 }
 
 struct ViewControllerIdentifier {

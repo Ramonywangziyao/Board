@@ -9,12 +9,14 @@
 import UIKit
 import AMScrollingNavbar
 import Spring
+import ZFDragableModalTransition
 
 class BaseViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var topBarView: DesignableView!
+    var animator: ZFModalTransitionAnimator!
     
     override func viewDidLoad() {
         super.viewDidLoad()

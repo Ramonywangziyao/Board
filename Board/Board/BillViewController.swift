@@ -50,7 +50,6 @@ class BillViewController: UIViewController {
         if let navigationController = self.navigationController as? ScrollingNavigationController {
             navigationController.followScrollView(tableView, delay: 50.0)
         }
-        
     }
     
     override func viewDidDisappear(animated: Bool) {

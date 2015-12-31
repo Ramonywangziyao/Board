@@ -69,10 +69,10 @@
                                 </variation>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-ZA-fZu" userLabel="Menu Drag Mask">
-                                <rect key="frame" x="0.0" y="64" width="16" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="32" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="16" id="jOi-Jd-oso"/>
+                                    <constraint firstAttribute="width" constant="32" id="jOi-Jd-oso"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-AE-n6P" customClass="DesignableView" customModule="Spring">
@@ -119,6 +119,9 @@
                                                 <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="1AU-uc-JFs" kind="presentation" identifier="AddBillSegue" id="Mso-Le-his"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,6 +205,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="294.5" y="349.5"/>
+        </scene>
+        <!--Add Bill View Controller-->
+        <scene sceneID="BFr-n9-rp5">
+            <objects>
+                <viewController id="1AU-uc-JFs" customClass="AddBillViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nUx-5D-HTb"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKq-45-SL7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HJ3-I0-yDa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-lb-3g3">
+                                <rect key="frame" x="0.0" y="148" width="375" height="519"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-PH-oYO">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="519"/>
+                                        <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ocH-PH-oYO" firstAttribute="centerX" secondItem="KYi-lb-3g3" secondAttribute="centerX" id="DCW-5W-X1T"/>
+                                    <constraint firstItem="ocH-PH-oYO" firstAttribute="top" secondItem="KYi-lb-3g3" secondAttribute="top" id="aqJ-0i-p7n"/>
+                                    <constraint firstItem="ocH-PH-oYO" firstAttribute="leading" secondItem="KYi-lb-3g3" secondAttribute="leading" id="eIe-Ut-oW9"/>
+                                    <constraint firstAttribute="bottom" secondItem="ocH-PH-oYO" secondAttribute="bottom" id="je3-uO-gqJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="ocH-PH-oYO" secondAttribute="trailing" id="rhx-do-R15"/>
+                                    <constraint firstItem="ocH-PH-oYO" firstAttribute="centerY" secondItem="KYi-lb-3g3" secondAttribute="centerY" id="vOJ-ki-AHy"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KYi-lb-3g3" firstAttribute="leading" secondItem="HJ3-I0-yDa" secondAttribute="leading" placeholder="YES" id="Laz-2P-zIe"/>
+                            <constraint firstItem="KYi-lb-3g3" firstAttribute="top" secondItem="nUx-5D-HTb" secondAttribute="bottom" id="NZk-7R-AKZ"/>
+                            <constraint firstItem="FKq-45-SL7" firstAttribute="top" secondItem="KYi-lb-3g3" secondAttribute="bottom" placeholder="YES" id="X24-KN-nYu"/>
+                            <constraint firstItem="KYi-lb-3g3" firstAttribute="top" secondItem="nUx-5D-HTb" secondAttribute="bottom" constant="128" placeholder="YES" id="apa-Mb-kHO"/>
+                            <constraint firstAttribute="trailing" secondItem="KYi-lb-3g3" secondAttribute="trailing" placeholder="YES" id="cEY-DG-4mL"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NZk-7R-AKZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="scrollView" destination="KYi-lb-3g3" id="3J1-fe-LjJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNq-r3-26j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807.5" y="349.5"/>
         </scene>
         <!--Bill View Controller-->
         <scene sceneID="vvr-A7-zQa">

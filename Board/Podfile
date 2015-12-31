@@ -16,6 +16,7 @@ pod 'AMScrollingNavbar'
 
 pod 'PullToBounce'
 pod 'DZNEmptyDataSet'
+pod "ZFDragableModalTransition"
 
 pod 'WYMaterialButton'
 pod 'RESideMenu'
