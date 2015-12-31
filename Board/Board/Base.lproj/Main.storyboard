@@ -222,10 +222,22 @@
                                 <rect key="frame" x="0.0" y="148" width="375" height="519"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-PH-oYO">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1LY-PD-T3R">
+                                                <rect key="frame" x="0.0" y="20" width="375" height="100"/>
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="GzN-7R-BW7"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="600" id="TXz-Zb-yAt"/>
+                                            <constraint firstAttribute="height" constant="1000" id="TXz-Zb-yAt"/>
+                                            <constraint firstAttribute="trailing" secondItem="1LY-PD-T3R" secondAttribute="trailing" id="d5K-YD-SQh"/>
+                                            <constraint firstItem="1LY-PD-T3R" firstAttribute="leading" secondItem="ocH-PH-oYO" secondAttribute="leading" id="xmg-sH-2VV"/>
+                                            <constraint firstItem="1LY-PD-T3R" firstAttribute="top" secondItem="ocH-PH-oYO" secondAttribute="top" constant="20" id="zJp-2R-eFO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
