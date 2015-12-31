@@ -13,6 +13,7 @@ import AMScrollingNavbar
 class BillViewController: UIViewController {
 
     var tableView: BillTableView!
+    var preventAnimation = Set<NSIndexPath>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,7 @@ class BillViewController: UIViewController {
             navigationController.stopFollowingScrollView()
             navigationController.showNavbar(animated: true)
         }
+        preventAnimation.removeAll()
     }
     
 }

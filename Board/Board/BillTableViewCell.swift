@@ -11,23 +11,25 @@ import SnapKit
 
 class BillTableViewCell: UITableViewCell {
     
+    var backView: UIView!
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .None
         self.contentView.backgroundColor = UIColor.clearColor()
         self.backgroundColor = UIColor.clearColor()
         
-        let view = UIView()
-        view.backgroundColor = UIColor.fb_white()
-        self.addSubview(view)
-        view.snp_makeConstraints { make in
+        backView = UIView()
+        backView.backgroundColor = UIColor.fb_white()
+        self.addSubview(backView)
+        backView.snp_makeConstraints { make in
             make.top.equalTo(self.snp_top).offset(8)
             make.left.equalTo(self.snp_left).offset(8)
             make.right.equalTo(self.snp_right).offset(-8)
             make.bottom.equalTo(self.snp_bottom)
             make.height.equalTo(92)
         }
-        fakeView(view)
+        fakeView(backView)
     }
     
     
