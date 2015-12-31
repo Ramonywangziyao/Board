@@ -12,6 +12,7 @@ class AddBillViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
+    private let topOffset: CGFloat = 128
     private var contentToTopOffset: CGFloat = 128
     private var originalScrollViewPoint = CGPoint()
     
@@ -35,7 +36,7 @@ class AddBillViewController: UIViewController {
     
     func setupScrollView() {
         self.scrollView.snp_makeConstraints {
-            $0.top.equalTo(self.view.snp_top).offset(128)
+            $0.top.equalTo(self.view.snp_top).offset(self.topOffset)
             $0.left.equalTo(self.view.snp_left)
             $0.right.equalTo(self.view.snp_right)
             $0.bottom.equalTo(self.view.snp_bottom)
@@ -44,30 +45,30 @@ class AddBillViewController: UIViewController {
     }
     
     func handlePan(sender: UIPanGestureRecognizer) {
-        let offset = sender.translationInView(self.scrollView).y
-        let velocity = sender.velocityInView(self.scrollView).y
+        let offset = sender.translationInView(self.view).y
+        let velocity = sender.velocityInView(self.view).y
         
         switch scrollView.panGestureRecognizer.state {
         case UIGestureRecognizerState.Began:
-            if velocity <= 0 {
+            if velocity.isSignMinus && contentToTopOffset != Constants.StatusBarHieght {
                 scrollView.scrollEnabled = false
             }
             break;
         case UIGestureRecognizerState.Changed:
-            if contentToTopOffset != Constants.StatusBarHieght {
+            if contentToTopOffset != Constants.StatusBarHieght && offset >= 0 {
                 scrollView.snp_updateConstraints {
                     $0.top.equalTo(self.view.snp_top).offset(contentToTopOffset + offset)
+                    $0.top.equalTo(self.view.snp_bottom)
                 }
-                scrollView.setContentOffset(CGPointMake(0, 0), animated: false)
             }
             break;
         case UIGestureRecognizerState.Ended,
             UIGestureRecognizerState.Cancelled,
             UIGestureRecognizerState.Failed:
-            if velocity <= 0 {
-                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            if velocity.isSignMinus {
+                springAnimation({ () -> () in
                     self.scrollView.frame = CGRectMake(0, Constants.StatusBarHieght, self.view.frame.width, self.view.frame.height - Constants.StatusBarHieght)
-                }, completion: { (finished) -> Void in
+                }, completion: { () -> () in
                     self.scrollView.snp_updateConstraints {
                         $0.top.equalTo(self.view.snp_top).offset(Constants.StatusBarHieght)
                     }
@@ -75,19 +76,27 @@ class AddBillViewController: UIViewController {
                     self.scrollView.scrollEnabled = true
                 })
             } else {
-                UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
-                    self.scrollView.frame = CGRectMake(0, 128, self.view.frame.width, self.view.frame.height - 128)
-                }, completion: { (finished) -> Void in
+                springAnimation({ () -> () in
+                    self.scrollView.frame = CGRectMake(0, self.topOffset, self.view.frame.width, self.view.frame.height - self.topOffset)
+                }, completion: { () -> () in
                     self.scrollView.snp_updateConstraints {
-                        $0.top.equalTo(self.view.snp_top).offset(128)
+                        $0.top.equalTo(self.view.snp_top).offset(self.topOffset)
                     }
-                    self.contentToTopOffset = 128
+                    self.contentToTopOffset = self.topOffset
                 })
             }
             break;
         default:
             break;
         }
+    }
+    
+    func springAnimation(during: () -> (), completion: () -> ()) {
+        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                during()
+            }, completion: { (finished) -> Void in
+                completion()
+        })
     }
     
     @IBAction func exitMaskButtonDidPressed(sender: UIButton) {
