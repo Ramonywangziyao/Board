@@ -9,11 +9,13 @@
 import UIKit
 import PullToBounce
 import AMScrollingNavbar
+import ZFDragableModalTransition
 
 class BillViewController: UIViewController {
 
     var tableView: BillTableView!
     var preventAnimation = Set<NSIndexPath>()
+    var animator: ZFModalTransitionAnimator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,18 @@ class BillViewController: UIViewController {
             navigationController.showNavbar(animated: true)
         }
         preventAnimation.removeAll()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SegueIdentifier.DetailBill {
+            let detailBillViewController = segue.destinationViewController as! DetailBillViewController
+            self.animator = ZFModalTransitionAnimator(modalViewController: detailBillViewController)
+            self.animator.dragable = true
+            self.animator.direction = ZFModalTransitonDirection.Bottom
+            self.animator.setContentScrollView(detailBillViewController.scrollView)
+            detailBillViewController.transitioningDelegate = self.animator
+            detailBillViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        }
     }
     
 }

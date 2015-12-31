@@ -49,7 +49,8 @@
 		88257B691C34F1DC00B40B0F /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B681C34F1DC00B40B0F /* CellAnimator.swift */; };
 		88257B6D1C34FA1300B40B0F /* menu_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 88257B6C1C34FA1300B40B0F /* menu_background.png */; };
 		88257B6F1C35A31400B40B0F /* BaseViewControllerSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B6E1C35A31400B40B0F /* BaseViewControllerSegues.swift */; };
-		88257B711C35A3E800B40B0F /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B701C35A3E800B40B0F /* AddBillViewController.swift */; };
+		88257B711C35A3E800B40B0F /* DetailBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B701C35A3E800B40B0F /* DetailBillViewController.swift */; };
+		88257B741C35E3F700B40B0F /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B731C35E3F700B40B0F /* AddBillViewController.swift */; };
 		882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */; };
 		882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */; };
 		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
@@ -132,7 +133,8 @@
 		88257B681C34F1DC00B40B0F /* CellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		88257B6C1C34FA1300B40B0F /* menu_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_background.png; sourceTree = "<group>"; };
 		88257B6E1C35A31400B40B0F /* BaseViewControllerSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerSegues.swift; sourceTree = "<group>"; };
-		88257B701C35A3E800B40B0F /* AddBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
+		88257B701C35A3E800B40B0F /* DetailBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBillViewController.swift; sourceTree = "<group>"; };
+		88257B731C35E3F700B40B0F /* AddBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
 		882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYCGRectExtension.swift; sourceTree = "<group>"; };
 		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
@@ -356,7 +358,7 @@
 		88257B721C35A3EF00B40B0F /* Add Bill */ = {
 			isa = PBXGroup;
 			children = (
-				88257B701C35A3E800B40B0F /* AddBillViewController.swift */,
+				88257B731C35E3F700B40B0F /* AddBillViewController.swift */,
 			);
 			name = "Add Bill";
 			sourceTree = "<group>";
@@ -367,6 +369,7 @@
 				8822A05F1C2E885C007D66DB /* BillViewController.swift */,
 				882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */,
 				8822A0CD1C2F55F9007D66DB /* BillEmptyDataExtension.swift */,
+				88257B701C35A3E800B40B0F /* DetailBillViewController.swift */,
 			);
 			name = Bill;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				8822A0C01C2E8B36007D66DB /* WYExtensionUITextField.swift in Sources */,
 				8822A0BA1C2E8B36007D66DB /* WYExtensionUIButton.swift in Sources */,
 				8822A0BC1C2E8B36007D66DB /* WYExtensionUIImage.swift in Sources */,
+				88257B741C35E3F700B40B0F /* AddBillViewController.swift in Sources */,
 				882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */,
 				8822A0CE1C2F55F9007D66DB /* BillEmptyDataExtension.swift in Sources */,
 				8822A0B31C2E8B36007D66DB /* WYExtensionDouble.swift in Sources */,
@@ -600,7 +604,7 @@
 				88B5188D1C31294E009AE721 /* BalanceTableViewExtension.swift in Sources */,
 				8822A0341C2E8570007D66DB /* BaseViewController.swift in Sources */,
 				8822A0321C2E8570007D66DB /* AppDelegate.swift in Sources */,
-				88257B711C35A3E800B40B0F /* AddBillViewController.swift in Sources */,
+				88257B711C35A3E800B40B0F /* DetailBillViewController.swift in Sources */,
 				8822A0601C2E885C007D66DB /* BillViewController.swift in Sources */,
 				88B518911C312AEF009AE721 /* BalanceTableViewCell.swift in Sources */,
 				88B5189A1C3235F4009AE721 /* UserService.swift in Sources */,

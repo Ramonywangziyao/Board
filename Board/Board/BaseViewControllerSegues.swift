@@ -16,8 +16,7 @@ extension BaseViewController {
             let addBillViewController = segue.destinationViewController as! AddBillViewController
             self.animator = ZFModalTransitionAnimator(modalViewController: addBillViewController)
             self.animator.dragable = true
-            self.animator.direction = ZFModalTransitonDirection.Bottom
-            self.animator.setContentScrollView(addBillViewController.scrollView)
+            self.animator.direction = ZFModalTransitonDirection.Right
             addBillViewController.transitioningDelegate = self.animator
             addBillViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         }

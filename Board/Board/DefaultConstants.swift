@@ -29,6 +29,7 @@ struct UserKeys {
 
 struct SegueIdentifier {
     static let Login = "LoginSegue"
+    static let DetailBill = "DetailBillSegue"
     static let AddBill = "AddBillSegue"
 }
 

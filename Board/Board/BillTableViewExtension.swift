@@ -25,5 +25,9 @@ extension BillViewController: UITableViewDelegate, UITableViewDataSource {
             CellAnimator.animate(cell as! BillTableViewCell)
         }
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier(SegueIdentifier.DetailBill, sender: self)
+    }
 
 }
