@@ -37,7 +37,11 @@ class AddBillViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        
+        let offset = scrollView.contentOffset
+        print(offset.y)
     }
 
+    @IBAction func exitMaskButtonDidPressed(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

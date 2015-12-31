@@ -222,10 +222,14 @@
                                 <rect key="frame" x="0.0" y="148" width="375" height="519"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ocH-PH-oYO">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="519"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                                         <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="600" id="TXz-Zb-yAt"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ocH-PH-oYO" firstAttribute="centerX" secondItem="KYi-lb-3g3" secondAttribute="centerX" id="DCW-5W-X1T"/>
                                     <constraint firstItem="ocH-PH-oYO" firstAttribute="top" secondItem="KYi-lb-3g3" secondAttribute="top" id="aqJ-0i-p7n"/>
@@ -233,16 +237,33 @@
                                     <constraint firstAttribute="bottom" secondItem="ocH-PH-oYO" secondAttribute="bottom" id="je3-uO-gqJ"/>
                                     <constraint firstAttribute="trailing" secondItem="ocH-PH-oYO" secondAttribute="trailing" id="rhx-do-R15"/>
                                     <constraint firstItem="ocH-PH-oYO" firstAttribute="centerY" secondItem="KYi-lb-3g3" secondAttribute="centerY" id="vOJ-ki-AHy"/>
+                                    <constraint firstItem="ocH-PH-oYO" firstAttribute="width" secondItem="KYi-lb-3g3" secondAttribute="width" id="wTl-on-0hY"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DCW-5W-X1T"/>
+                                        <exclude reference="vOJ-ki-AHy"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ae1-jf-sPd" userLabel="Exit Mask">
+                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                                <connections>
+                                    <action selector="exitMaskButtonDidPressed:" destination="1AU-uc-JFs" eventType="touchUpInside" id="9Mq-Bk-Fs5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="KYi-lb-3g3" firstAttribute="leading" secondItem="HJ3-I0-yDa" secondAttribute="leading" placeholder="YES" id="Laz-2P-zIe"/>
                             <constraint firstItem="KYi-lb-3g3" firstAttribute="top" secondItem="nUx-5D-HTb" secondAttribute="bottom" id="NZk-7R-AKZ"/>
+                            <constraint firstItem="ae1-jf-sPd" firstAttribute="leading" secondItem="HJ3-I0-yDa" secondAttribute="leading" id="PN9-fo-ogw"/>
                             <constraint firstItem="FKq-45-SL7" firstAttribute="top" secondItem="KYi-lb-3g3" secondAttribute="bottom" placeholder="YES" id="X24-KN-nYu"/>
+                            <constraint firstItem="ae1-jf-sPd" firstAttribute="top" secondItem="nUx-5D-HTb" secondAttribute="bottom" id="aCy-Ae-J3V"/>
                             <constraint firstItem="KYi-lb-3g3" firstAttribute="top" secondItem="nUx-5D-HTb" secondAttribute="bottom" constant="128" placeholder="YES" id="apa-Mb-kHO"/>
                             <constraint firstAttribute="trailing" secondItem="KYi-lb-3g3" secondAttribute="trailing" placeholder="YES" id="cEY-DG-4mL"/>
+                            <constraint firstAttribute="trailing" secondItem="ae1-jf-sPd" secondAttribute="trailing" id="etx-ws-t7q"/>
+                            <constraint firstItem="KYi-lb-3g3" firstAttribute="top" secondItem="ae1-jf-sPd" secondAttribute="bottom" id="gXU-tz-M2H"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
