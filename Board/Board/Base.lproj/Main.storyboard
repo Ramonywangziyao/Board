@@ -66,9 +66,9 @@
                                 </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="yr6-h9-U1b"/>
                                         <exclude reference="OUW-kC-dss"/>
                                         <exclude reference="cXJ-Vq-Djh"/>
+                                        <exclude reference="yr6-h9-U1b"/>
                                     </mask>
                                 </variation>
                             </textField>

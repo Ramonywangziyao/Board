@@ -60,7 +60,6 @@ class BillViewController: UIViewController {
             navigationController.stopFollowingScrollView()
             navigationController.showNavbar(animated: true)
         }
-        preventAnimation.removeAll()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

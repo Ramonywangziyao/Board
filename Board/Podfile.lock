@@ -53,7 +53,6 @@ PODS:
   - YYKit (0.9.8):
     - YYKit/no-arc (= 0.9.8)
   - YYKit/no-arc (0.9.8)
-  - ZFDragableModalTransition (0.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -74,7 +73,6 @@ DEPENDENCIES:
   - Venmo-iOS-SDK
   - WYMaterialButton
   - YYKit
-  - ZFDragableModalTransition
 
 EXTERNAL SOURCES:
   Spring:
@@ -110,6 +108,5 @@ SPEC CHECKSUMS:
   Venmo-iOS-SDK: 456097c6df57544362719ea8db01541953aec44d
   WYMaterialButton: 41b9a4334b5e667e86aacf1e58204561b12b347b
   YYKit: 1eadb09e245f0c0f6892599fe7871c67507c4ad5
-  ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
 COCOAPODS: 0.39.0
