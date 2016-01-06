@@ -24,8 +24,24 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.view.addSubview(self.loginButton)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        dispatch_delay(0.3) {
+            self.navigationController?.setNavigationBarHidden(true, animated: true)
+        }
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        UserInfo.facebookLogin(result.token.description) { (succ, error, result) -> () in
+        guard let fbToken = result.token else {
+            print("Login Cancelled")
+            return
+        }
+        UserInfo.facebookLogin(fbToken.tokenString) { (succ, error, result) -> () in
             if succ {
                 print(UserInfo.getUserName())
                 print(UserInfo.getUserEmail())

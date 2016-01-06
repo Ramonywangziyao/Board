@@ -36,6 +36,6 @@ struct SegueIdentifier {
 struct ViewControllerIdentifier {
     static let ContentNav = "ContentNavigationController"
     static let LeftMenu = "LeftMenuViewController"
-    static let Login = "LoginViewController"
+    static let Login = "LoginNavController"
     static let RootView = "RootViewController"
 }
