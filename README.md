@@ -1,5 +1,5 @@
 # Board
-Hassle-free bill splitting app
+Cloud-based Hassle-free bill splitting app
 
 # Installation
 1. `git clone git@github.com:yuwang17/Board.git`
@@ -10,4 +10,4 @@ Hassle-free bill splitting app
 1. Initial storyboard is no longer `Main.storyboard` but `Start.storyboard`
 2. Please seperate different modules on different storyboards, keeping organized (MVCS)
 3. The Entry View Controller is set in `AppDelegate.swift`
-4. User data is stored in `NSUserDefault` and Cache data should be in CoreData, which haven't used yet!
+4. User data is stored in `NSUserDefault`
