@@ -7,55 +7,67 @@
 //
 
 import UIKit
-import FBSDKCoreKit
 import FBSDKLoginKit
+import WYMaterialButton
+import ReactiveCocoa
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController {
 
-    var loginButton: FBSDKLoginButton!
+    @IBOutlet weak var facebookLoginButton: WYMaterialButton!
+    private var loginSucceed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.loginButton = FBSDKLoginButton()
-        self.loginButton.center = self.view.center
-        self.loginButton.delegate = self
-        self.loginButton.readPermissions = ["public_profile", "email", "user_friends"]
-        self.view.addSubview(self.loginButton)
+        facebookLoginButton.rac_signalForControlEvents(.TouchUpInside)
+        .subscribeNext { (button) -> Void in
+            let readPermissions = ["public_profile", "email", "user_friends"]
+            FBSDKLoginManager().logInWithReadPermissions(readPermissions, fromViewController: self) {
+                (result: FBSDKLoginManagerLoginResult!, error) -> Void in
+                if error != nil {
+                    print("Login Error: \(error)")
+                } else if result.isCancelled {
+                    print("Login Cancelled")
+                } else {
+                    print("Login Succeed")
+                    self.handleFBLoginResult(result)
+                }
+            }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        dispatch_delay(0.3) {
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
+        if loginSucceed == false {
+            dispatch_delay(0.3) {
+                self.navigationController?.setNavigationBarHidden(true, animated: true)
+                UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+            }
         }
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        if loginSucceed {
+            facebookLoginButton.animation = "fall"
+            facebookLoginButton.animate()
+        }
     }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        guard let fbToken = result.token else {
-            print("Login Cancelled")
-            return
-        }
-        UserInfo.facebookLogin(fbToken.tokenString) { (succ, error, result) -> () in
+    func handleFBLoginResult(result: FBSDKLoginManagerLoginResult!) {
+        UserInfo.facebookLogin(result.token.tokenString) { (succ, error, result) -> () in
             if succ {
+                self.loginSucceed = true
                 print(UserInfo.getUserName())
                 print(UserInfo.getUserEmail())
                 print(UserInfo.getUserPortrait())
                 print(UserInfo.getUserCoverPhoto())
-                self.performSegueWithIdentifier(SegueIdentifier.Login, sender: loginButton)
+                self.performSegueWithIdentifier(SegueIdentifier.Login, sender: nil)
+                self.navigationController?.setNavigationBarHidden(false, animated: true)
+                UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
             } else {
                 print("Login Failed!")
             }
         }
-    }
-
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        UserInfo.logout()
     }
     
 }

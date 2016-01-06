@@ -16,6 +16,7 @@ struct Constants {
     static let EntireBarHeight: CGFloat = 64
     static let NavBarHeight: CGFloat = 44
     static let StatusBarHieght: CGFloat = 20
+    static let StandardPadding: CGFloat = 8
 }
 
 struct UserKeys {

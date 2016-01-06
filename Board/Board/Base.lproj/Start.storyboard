@@ -50,7 +50,7 @@
             </objects>
             <point key="canvasLocation" x="790.5" y="347.5"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="8tL-yj-otf">
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="xCo-K7-hq7" customClass="LoginViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,12 +61,34 @@
                     <view key="view" contentMode="scaleToFill" id="mck-zT-MrR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ7-KO-oRA" customClass="WYMaterialButton" customModule="WYMaterialButton">
+                                <rect key="frame" x="36" y="599" width="303" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4lS-vw-aax"/>
+                                </constraints>
+                                <state key="normal" title="Facebook Quick Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="materialColor">
+                                        <color key="value" red="0.42374211549758911" green="0.51364630460739136" blue="0.71284264326095581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dJ7-KO-oRA" secondAttribute="trailing" constant="36" id="KKk-BW-rVe"/>
+                            <constraint firstItem="dJ7-KO-oRA" firstAttribute="leading" secondItem="mck-zT-MrR" secondAttribute="leading" constant="36" id="bWz-ez-cLL"/>
+                            <constraint firstItem="MYg-JE-rgk" firstAttribute="top" secondItem="dJ7-KO-oRA" secondAttribute="bottom" constant="24" id="tVb-P8-lCD"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="G21-6H-leg"/>
+                    <navigationItem key="navigationItem" title="Login" id="G21-6H-leg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="T1n-5M-TcL" kind="presentation" identifier="LoginSegue" modalTransitionStyle="flipHorizontal" id="iRb-6N-5Vc"/>
+                        <outlet property="facebookLoginButton" destination="dJ7-KO-oRA" id="tBL-5Y-4P6"/>
+                        <segue destination="T1n-5M-TcL" kind="presentation" identifier="LoginSegue" modalTransitionStyle="crossDissolve" id="iRb-6N-5Vc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sgb-VZ-seb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,6 +105,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.21730047464370728" green="0.33415520191192627" blue="0.61228710412979126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

@@ -53,7 +53,7 @@ class UserService: NSObject {
                     self.userDefault.setObject(((result["picture"]! as! [String: AnyObject])["data"]! as! [String: AnyObject])["url"]!, forKey: UserKeys.Portrait)
                     self.userDefault.setObject((result["cover"] as! [String: AnyObject])["source"], forKey: UserKeys.CoverPhoto)
                     self.userDefault.synchronize()
-                    //TODO: upload facebook user data
+                    //TODO: upload facebook user data to server
                     completion(succ: true, error: nil, result: nil)
                 } else {
                     completion(succ: false, error: error.description, result: nil)

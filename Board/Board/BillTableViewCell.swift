@@ -31,10 +31,9 @@ class BillTableViewCell: UITableViewCell {
         }
         fakeView(backView)
     }
-    
-    
+
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        fatalError("init(coder:) has not been implemented")
     }
     
     func fakeView(view: UIView) {
@@ -59,11 +58,6 @@ class BillTableViewCell: UITableViewCell {
         addLine(line1)
         addLine(line2)
         addLine(line3)
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
     }
 
 }
