@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ZFDragableModalTransition
 
 extension BillViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -15,7 +16,7 @@ extension BillViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("BillTableViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("BillTableViewCell", forIndexPath: indexPath) as! BillTableViewCell
         return cell
     }
     
@@ -27,7 +28,27 @@ extension BillViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! BillTableViewCell
+        UIView.animateWithDuration(0.2, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.2, options: UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
+            cell.backView.alpha = 0.5
+            }) { (finished) -> Void in
+                dispatch_delay(0.3) {
+                    cell.backView.alpha = 1
+                }
+        }
         self.performSegueWithIdentifier(SegueIdentifier.DetailBill, sender: self)
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == SegueIdentifier.DetailBill {
+            let detailBillViewController = segue.destinationViewController as! DetailBillViewController
+            self.animator = ZFModalTransitionAnimator(modalViewController: detailBillViewController)
+            self.animator.dragable = true
+            self.animator.direction = ZFModalTransitonDirection.Bottom
+            self.animator.setContentScrollView(detailBillViewController.scrollView)
+            detailBillViewController.transitioningDelegate = self.animator
+            detailBillViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        }
+    }
+    
 }

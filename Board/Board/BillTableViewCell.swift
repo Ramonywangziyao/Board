@@ -61,8 +61,6 @@ class BillTableViewCell: UITableViewCell {
         addLine(line3)
     }
     
-
-    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

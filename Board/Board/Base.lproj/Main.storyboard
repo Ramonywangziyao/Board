@@ -295,7 +295,7 @@
         <!--Detail Bill View Controller-->
         <scene sceneID="BFr-n9-rp5">
             <objects>
-                <viewController id="1AU-uc-JFs" customClass="DetailBillViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailBillViewController" id="1AU-uc-JFs" customClass="DetailBillViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nUx-5D-HTb"/>
                         <viewControllerLayoutGuide type="bottom" id="FKq-45-SL7"/>

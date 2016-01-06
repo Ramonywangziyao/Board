@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32D984851C11E4D51A9298BF /* Pods_Board.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A0166B03423BA0DDF253C9 /* Pods_Board.framework */; };
+		8802515C1C3CFCF800A507F4 /* ZFModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8802515B1C3CFCF800A507F4 /* ZFModalTransitionAnimator.m */; };
 		8822A0321C2E8570007D66DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0311C2E8570007D66DB /* AppDelegate.swift */; };
 		8822A0341C2E8570007D66DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0331C2E8570007D66DB /* BaseViewController.swift */; };
 		8822A0371C2E8570007D66DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8822A0351C2E8570007D66DB /* Main.storyboard */; };
@@ -51,7 +52,6 @@
 		88257B6F1C35A31400B40B0F /* BaseViewControllerSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B6E1C35A31400B40B0F /* BaseViewControllerSegues.swift */; };
 		88257B711C35A3E800B40B0F /* DetailBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B701C35A3E800B40B0F /* DetailBillViewController.swift */; };
 		88257B741C35E3F700B40B0F /* AddBillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88257B731C35E3F700B40B0F /* AddBillViewController.swift */; };
-		88257B981C3702BE00B40B0F /* ZFModalTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257B971C3702BE00B40B0F /* ZFModalTransitionAnimator.m */; };
 		882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */; };
 		882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */; };
 		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
@@ -87,6 +87,8 @@
 /* Begin PBXFileReference section */
 		57F84606F108D0485A165D7C /* Pods-Board.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.release.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.release.xcconfig"; sourceTree = "<group>"; };
 		71A0166B03423BA0DDF253C9 /* Pods_Board.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Board.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8802515A1C3CFCF800A507F4 /* ZFModalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFModalTransitionAnimator.h; sourceTree = "<group>"; };
+		8802515B1C3CFCF800A507F4 /* ZFModalTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFModalTransitionAnimator.m; sourceTree = "<group>"; };
 		8822A02E1C2E8570007D66DB /* Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Board.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8822A0311C2E8570007D66DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8822A0331C2E8570007D66DB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -136,8 +138,6 @@
 		88257B6E1C35A31400B40B0F /* BaseViewControllerSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerSegues.swift; sourceTree = "<group>"; };
 		88257B701C35A3E800B40B0F /* DetailBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailBillViewController.swift; sourceTree = "<group>"; };
 		88257B731C35E3F700B40B0F /* AddBillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBillViewController.swift; sourceTree = "<group>"; };
-		88257B961C3702BE00B40B0F /* ZFModalTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZFModalTransitionAnimator.h; sourceTree = "<group>"; };
-		88257B971C3702BE00B40B0F /* ZFModalTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZFModalTransitionAnimator.m; sourceTree = "<group>"; };
 		882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
 		882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYCGRectExtension.swift; sourceTree = "<group>"; };
 		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
@@ -370,8 +370,8 @@
 		88257B991C3702C600B40B0F /* ZFModalTransitionAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				88257B961C3702BE00B40B0F /* ZFModalTransitionAnimator.h */,
-				88257B971C3702BE00B40B0F /* ZFModalTransitionAnimator.m */,
+				8802515A1C3CFCF800A507F4 /* ZFModalTransitionAnimator.h */,
+				8802515B1C3CFCF800A507F4 /* ZFModalTransitionAnimator.m */,
 			);
 			name = ZFModalTransitionAnimator;
 			sourceTree = "<group>";
@@ -618,7 +618,7 @@
 				8822A0341C2E8570007D66DB /* BaseViewController.swift in Sources */,
 				8822A0321C2E8570007D66DB /* AppDelegate.swift in Sources */,
 				88257B711C35A3E800B40B0F /* DetailBillViewController.swift in Sources */,
-				88257B981C3702BE00B40B0F /* ZFModalTransitionAnimator.m in Sources */,
+				8802515C1C3CFCF800A507F4 /* ZFModalTransitionAnimator.m in Sources */,
 				8822A0601C2E885C007D66DB /* BillViewController.swift in Sources */,
 				88B518911C312AEF009AE721 /* BalanceTableViewCell.swift in Sources */,
 				88B5189A1C3235F4009AE721 /* UserService.swift in Sources */,

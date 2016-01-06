@@ -62,16 +62,4 @@ class BillViewController: UIViewController {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == SegueIdentifier.DetailBill {
-            let detailBillViewController = segue.destinationViewController as! DetailBillViewController
-            self.animator = ZFModalTransitionAnimator(modalViewController: detailBillViewController)
-            self.animator.dragable = true
-            self.animator.direction = ZFModalTransitonDirection.Bottom
-            self.animator.setContentScrollView(detailBillViewController.scrollView)
-            detailBillViewController.transitioningDelegate = self.animator
-            detailBillViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
-        }
-    }
-    
 }
