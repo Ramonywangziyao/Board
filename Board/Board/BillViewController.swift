@@ -14,6 +14,7 @@ import ZFDragableModalTransition
 class BillViewController: UIViewController {
 
     var tableView: BillTableView!
+    var cellSelected = false
     var preventAnimation = Set<NSIndexPath>()
     var animator: ZFModalTransitionAnimator!
     
@@ -54,11 +55,17 @@ class BillViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let navigationController = self.navigationController as? ScrollingNavigationController {
+            navigationController.showNavbar(animated: true)
+        }
+    }
+    
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         if let navigationController = self.navigationController as? ScrollingNavigationController {
             navigationController.stopFollowingScrollView()
-            navigationController.showNavbar(animated: true)
         }
     }
     
