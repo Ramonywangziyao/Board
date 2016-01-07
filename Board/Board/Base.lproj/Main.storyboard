@@ -27,7 +27,7 @@
                                 <color key="textColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bill Notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0sb-1A-W3O" customClass="JiroTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bill Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0sb-1A-W3O" customClass="JiroTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="60" width="343" height="72"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -87,6 +87,10 @@
                             <constraint firstItem="0sb-1A-W3O" firstAttribute="height" secondItem="ePV-99-iHF" secondAttribute="height" id="nMl-qM-eUj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billAmountTextField" destination="ePV-99-iHF" id="ogr-nl-XdM"/>
+                        <outlet property="billTitleTextField" destination="0sb-1A-W3O" id="DAa-E3-Oj2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayA-3A-3kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
