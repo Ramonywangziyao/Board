@@ -23,7 +23,8 @@ class AlterManager: NSObject {
             kCRToastAnimationInDirectionKey: CRToastAnimationDirection.Top.rawValue,
             kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue,
             kCRToastNotificationTypeKey: CRToastType.NavigationBar.rawValue,
-            kCRToastNotificationPresentationTypeKey: CRToastPresentationType.Cover.rawValue
+            kCRToastNotificationPresentationTypeKey: CRToastPresentationType.Cover.rawValue,
+            kCRToastFontKey: UIFont(name: "AvenirNext-Medium", size: 18)!
         ]
         CRToastManager.showNotificationWithOptions(options, completionBlock: completion)
     }
@@ -39,6 +40,7 @@ class AlterManager: NSObject {
             kCRToastAnimationOutDirectionKey: CRToastAnimationDirection.Top.rawValue,
             kCRToastNotificationTypeKey: CRToastType.StatusBar.rawValue,
             kCRToastNotificationPresentationTypeKey: CRToastPresentationType.Cover.rawValue
+            kCRToastFontKey: UIFont(name: "AvenirNext-Medium", size: 12)!
         ]
         CRToastManager.showNotificationWithOptions(options, completionBlock: completion)
     }
