@@ -17,6 +17,7 @@ class AddBillViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         billAmountTextField.rac_textSignal()
             .toSignalProducer()
             .map { $0 as! String }

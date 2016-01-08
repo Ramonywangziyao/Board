@@ -56,6 +56,7 @@
 		882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */; };
 		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
 		882FD2D21C2F8E06008B2E95 /* BillTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */; };
+		88AF414E1C3F320300B2FEB8 /* AlterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF414D1C3F320300B2FEB8 /* AlterManager.swift */; };
 		88B518811C312135009AE721 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518801C312135009AE721 /* camera@2x.png */; };
 		88B518851C312258009AE721 /* writeBill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518841C312258009AE721 /* writeBill@2x.png */; };
 		88B518891C3123A7009AE721 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518881C3123A7009AE721 /* menu@2x.png */; };
@@ -142,6 +143,7 @@
 		882FD2C31C2F7CBF008B2E95 /* WYCGRectExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYCGRectExtension.swift; sourceTree = "<group>"; };
 		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
 		882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewExtension.swift; sourceTree = "<group>"; };
+		88AF414D1C3F320300B2FEB8 /* AlterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterManager.swift; sourceTree = "<group>"; };
 		88B518801C312135009AE721 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		88B518841C312258009AE721 /* writeBill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeBill@2x.png"; sourceTree = "<group>"; };
 		88B518881C3123A7009AE721 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				88B518991C3235F4009AE721 /* UserService.swift */,
 				8822A0641C2E8895007D66DB /* WebService.swift */,
 				8822A0CB1C2F107D007D66DB /* DefaultConstants.swift */,
+				88AF414D1C3F320300B2FEB8 /* AlterManager.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				8822A0C71C2F0E68007D66DB /* LeftMenuViewController.swift in Sources */,
 				8822A0B91C2E8B36007D66DB /* WYExtensionString.swift in Sources */,
 				8822A0BF1C2E8B36007D66DB /* WYExtensionUIScreen.swift in Sources */,
+				88AF414E1C3F320300B2FEB8 /* AlterManager.swift in Sources */,
 				8822A0B51C2E8B36007D66DB /* WYExtensionImageLoader.swift in Sources */,
 				8822A0BB1C2E8B36007D66DB /* WYExtensionUIColor.swift in Sources */,
 				8822A0B71C2E8B36007D66DB /* WYExtensionNSUserDefault.swift in Sources */,

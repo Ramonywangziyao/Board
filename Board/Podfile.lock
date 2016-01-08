@@ -50,9 +50,9 @@ PODS:
     - SSKeychain (~> 1.2.2)
     - VENCore (~> 3.0.0)
   - WYMaterialButton (0.2.3)
-  - YYKit (0.9.8):
-    - YYKit/no-arc (= 0.9.8)
-  - YYKit/no-arc (0.9.8)
+  - YYKit (0.9.9):
+    - YYKit/no-arc (= 0.9.9)
+  - YYKit/no-arc (0.9.9)
 
 DEPENDENCIES:
   - Alamofire
@@ -107,6 +107,6 @@ SPEC CHECKSUMS:
   VENCore: 7adedc7c0e65e3ba922cc21c35f3d0e133d43df7
   Venmo-iOS-SDK: 456097c6df57544362719ea8db01541953aec44d
   WYMaterialButton: 41b9a4334b5e667e86aacf1e58204561b12b347b
-  YYKit: 1eadb09e245f0c0f6892599fe7871c67507c4ad5
+  YYKit: 158c34b1f20b5f4741d6cb68205cf5553552a758
 
 COCOAPODS: 0.39.0
