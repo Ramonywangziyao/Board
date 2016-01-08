@@ -9,7 +9,6 @@
 import UIKit
 import PullToBounce
 import AMScrollingNavbar
-import ZFDragableModalTransition
 
 class BillViewController: UIViewController {
 

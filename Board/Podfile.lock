@@ -24,6 +24,7 @@ PODS:
   - FBSDKShareKit (4.8.0):
     - FBSDKCoreKit
   - JTSImageViewController (1.5.1)
+  - LiquidFloatingActionButton (0.1.1)
   - PullToBounce (0.0.3)
   - ReactiveCocoa (4.0.4-alpha-4):
     - ReactiveCocoa/UI (= 4.0.4-alpha-4)
@@ -50,9 +51,9 @@ PODS:
     - SSKeychain (~> 1.2.2)
     - VENCore (~> 3.0.0)
   - WYMaterialButton (0.2.3)
-  - YYKit (0.9.9):
-    - YYKit/no-arc (= 0.9.9)
-  - YYKit/no-arc (0.9.9)
+  - YYKit (0.9.10):
+    - YYKit/no-arc (= 0.9.10)
+  - YYKit/no-arc (0.9.10)
 
 DEPENDENCIES:
   - Alamofire
@@ -63,6 +64,8 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - JTSImageViewController
+  - LiquidFloatingActionButton (from `https://github.com/yoavlt/LiquidFloatingActionButton`,
+    branch `swift-2.0`)
   - PullToBounce
   - ReactiveCocoa (~> 4.0.4-alpha-4)
   - RESideMenu
@@ -75,11 +78,17 @@ DEPENDENCIES:
   - YYKit
 
 EXTERNAL SOURCES:
+  LiquidFloatingActionButton:
+    :branch: swift-2.0
+    :git: https://github.com/yoavlt/LiquidFloatingActionButton
   Spring:
     :branch: swift2
     :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
+  LiquidFloatingActionButton:
+    :commit: 6c2a30a548d1f44e78b54571e616d637c92b5206
+    :git: https://github.com/yoavlt/LiquidFloatingActionButton
   Spring:
     :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
     :git: https://github.com/MengTo/Spring.git
@@ -95,6 +104,7 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
+  LiquidFloatingActionButton: dcdae1e59eb07eccbf60c027001a4d6731c345c9
   PullToBounce: d2c6300b92fa124f7133e0ca0088bbf7a7059194
   ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
   RESideMenu: f24c508404b49c667344c54aba7e590883533958
@@ -107,6 +117,6 @@ SPEC CHECKSUMS:
   VENCore: 7adedc7c0e65e3ba922cc21c35f3d0e133d43df7
   Venmo-iOS-SDK: 456097c6df57544362719ea8db01541953aec44d
   WYMaterialButton: 41b9a4334b5e667e86aacf1e58204561b12b347b
-  YYKit: 158c34b1f20b5f4741d6cb68205cf5553552a758
+  YYKit: c220d01f6fe9fd4b4b379e2dad50fffd2b2ce633
 
 COCOAPODS: 0.39.0

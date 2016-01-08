@@ -57,6 +57,7 @@
 		882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2C51C2F8380008B2E95 /* BillTableView.swift */; };
 		882FD2D21C2F8E06008B2E95 /* BillTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */; };
 		88AF414E1C3F320300B2FEB8 /* AlterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF414D1C3F320300B2FEB8 /* AlterManager.swift */; };
+		88AF419C1C3F6C0400B2FEB8 /* refund@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF419B1C3F6C0400B2FEB8 /* refund@2x.png */; };
 		88B518811C312135009AE721 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518801C312135009AE721 /* camera@2x.png */; };
 		88B518851C312258009AE721 /* writeBill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518841C312258009AE721 /* writeBill@2x.png */; };
 		88B518891C3123A7009AE721 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518881C3123A7009AE721 /* menu@2x.png */; };
@@ -144,6 +145,7 @@
 		882FD2C51C2F8380008B2E95 /* BillTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableView.swift; sourceTree = "<group>"; };
 		882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewExtension.swift; sourceTree = "<group>"; };
 		88AF414D1C3F320300B2FEB8 /* AlterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterManager.swift; sourceTree = "<group>"; };
+		88AF419B1C3F6C0400B2FEB8 /* refund@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refund@2x.png"; sourceTree = "<group>"; };
 		88B518801C312135009AE721 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		88B518841C312258009AE721 /* writeBill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeBill@2x.png"; sourceTree = "<group>"; };
 		88B518881C3123A7009AE721 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		8822A0D41C2F56FA007D66DB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				88AF419B1C3F6C0400B2FEB8 /* refund@2x.png */,
 				88257B6C1C34FA1300B40B0F /* menu_background.png */,
 				88B518801C312135009AE721 /* camera@2x.png */,
 				88B518841C312258009AE721 /* writeBill@2x.png */,
@@ -525,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88AF419C1C3F6C0400B2FEB8 /* refund@2x.png in Resources */,
 				8822A03C1C2E8570007D66DB /* LaunchScreen.storyboard in Resources */,
 				88B518811C312135009AE721 /* camera@2x.png in Resources */,
 				8822A0391C2E8570007D66DB /* Assets.xcassets in Resources */,
