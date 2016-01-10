@@ -94,9 +94,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayA-3A-3kO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769.5" y="349.5"/>
+            <point key="canvasLocation" x="815.5" y="349.5"/>
         </scene>
-        <!--Base View Controller-->
+        <!--Board-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="BaseViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,75 +159,31 @@
                                 </variation>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-ZA-fZu" userLabel="Menu Drag Mask">
-                                <rect key="frame" x="0.0" y="64" width="32" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="24" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="jOi-Jd-oso"/>
+                                    <constraint firstAttribute="width" constant="24" id="jOi-Jd-oso"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-AE-n6P" customClass="DesignableView" customModule="Spring">
                                 <rect key="frame" x="0.0" y="64" width="375" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26w-7z-0nP" customClass="WYMaterialButton" customModule="WYMaterialButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="40"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                        <color key="tintColor" red="0.42655369640000002" green="0.475846082" blue="0.4802647531" alpha="1" colorSpace="calibratedRGB"/>
-                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
-                                        <state key="normal" title="Photo" image="camera.png">
-                                            <color key="titleColor" red="0.39995324611663818" green="0.40002685785293579" blue="0.39994865655899048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="materialColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="materialPressedColor">
-                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H4I-2u-v8I">
-                                        <rect key="frame" x="187" y="12" width="1" height="16"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="Ovp-E3-XKd"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKF-Y3-mBJ" customClass="WYMaterialButton" customModule="WYMaterialButton">
-                                        <rect key="frame" x="188" y="0.0" width="187" height="40"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
-                                        <state key="normal" title="Add Bill" image="writeBill.png">
-                                            <color key="titleColor" red="0.39995324611663818" green="0.40002685785293579" blue="0.39994865655899048" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="materialColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="materialPressedColor">
-                                                <color key="value" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="oos-2U-Lic" kind="presentation" identifier="AddBillSegue" id="8mE-Fn-0eh"/>
-                                        </connections>
-                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KBX-2p-7AF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="41"/>
+                                        <segments>
+                                            <segment title="Bill"/>
+                                            <segment title="Balance"/>
+                                        </segments>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="H4I-2u-v8I" secondAttribute="bottom" constant="12" id="2sj-p3-jcZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="WKF-Y3-mBJ" secondAttribute="bottom" id="3jd-hb-TPR"/>
                                     <constraint firstAttribute="height" constant="40" placeholder="YES" id="4Vb-ut-jto"/>
-                                    <constraint firstAttribute="bottom" secondItem="26w-7z-0nP" secondAttribute="bottom" id="D1Y-IG-eEP"/>
-                                    <constraint firstItem="26w-7z-0nP" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="DAD-Ux-uCn"/>
-                                    <constraint firstItem="H4I-2u-v8I" firstAttribute="centerX" secondItem="1u5-AE-n6P" secondAttribute="centerX" id="DkZ-pf-Dkz"/>
-                                    <constraint firstItem="H4I-2u-v8I" firstAttribute="leading" secondItem="26w-7z-0nP" secondAttribute="trailing" id="J1H-eF-tbQ"/>
-                                    <constraint firstItem="WKF-Y3-mBJ" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="OGx-zT-1nn"/>
-                                    <constraint firstAttribute="trailing" secondItem="WKF-Y3-mBJ" secondAttribute="trailing" id="qd1-i1-kIt"/>
-                                    <constraint firstItem="H4I-2u-v8I" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" constant="12" id="xOt-M0-O8R"/>
-                                    <constraint firstItem="WKF-Y3-mBJ" firstAttribute="leading" secondItem="H4I-2u-v8I" secondAttribute="trailing" id="xu5-Sh-MwL"/>
-                                    <constraint firstItem="26w-7z-0nP" firstAttribute="leading" secondItem="1u5-AE-n6P" secondAttribute="leading" id="zgY-of-Q56"/>
+                                    <constraint firstItem="KBX-2p-7AF" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="Bq1-ms-cnf"/>
+                                    <constraint firstItem="KBX-2p-7AF" firstAttribute="leading" secondItem="1u5-AE-n6P" secondAttribute="leading" id="HWx-nP-VFA"/>
+                                    <constraint firstAttribute="bottom" secondItem="KBX-2p-7AF" secondAttribute="bottom" id="VB1-6i-ske"/>
+                                    <constraint firstAttribute="trailing" secondItem="KBX-2p-7AF" secondAttribute="trailing" id="X8F-1Y-aD6"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -267,29 +223,20 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="j7d-0n-9DZ">
-                        <nil key="title"/>
+                    <navigationItem key="navigationItem" title="Board" id="j7d-0n-9DZ">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" id="8Or-Ri-wmr">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="menuButtonDidPressed:" destination="BYZ-38-t0r" id="y7l-V2-D4l"/>
                             </connections>
                         </barButtonItem>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="KBX-2p-7AF">
-                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Bill"/>
-                                <segment title="Balance"/>
-                            </segments>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </segmentedControl>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mainScrollView" destination="vhx-8L-Fxp" id="N8c-Jm-KEv"/>
                         <outlet property="segmentControl" destination="KBX-2p-7AF" id="X0R-XG-Uch"/>
                         <outlet property="topBarView" destination="1u5-AE-n6P" id="25E-8s-4vu"/>
+                        <segue destination="oos-2U-Lic" kind="presentation" identifier="AddBillSegue" id="c6u-BT-lqG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -456,8 +403,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera.png" width="16" height="16"/>
         <image name="menu.png" width="16" height="16"/>
-        <image name="writeBill.png" width="16" height="16"/>
     </resources>
 </document>

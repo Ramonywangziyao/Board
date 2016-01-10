@@ -24,7 +24,6 @@ PODS:
   - FBSDKShareKit (4.8.0):
     - FBSDKCoreKit
   - JTSImageViewController (1.5.1)
-  - LiquidFloatingActionButton (0.1.1)
   - PullToBounce (0.0.3)
   - ReactiveCocoa (4.0.4-alpha-4):
     - ReactiveCocoa/UI (= 4.0.4-alpha-4)
@@ -64,8 +63,6 @@ DEPENDENCIES:
   - FBSDKLoginKit
   - FBSDKShareKit
   - JTSImageViewController
-  - LiquidFloatingActionButton (from `https://github.com/yoavlt/LiquidFloatingActionButton`,
-    branch `swift-2.0`)
   - PullToBounce
   - ReactiveCocoa (~> 4.0.4-alpha-4)
   - RESideMenu
@@ -78,17 +75,11 @@ DEPENDENCIES:
   - YYKit
 
 EXTERNAL SOURCES:
-  LiquidFloatingActionButton:
-    :branch: swift-2.0
-    :git: https://github.com/yoavlt/LiquidFloatingActionButton
   Spring:
     :branch: swift2
     :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
-  LiquidFloatingActionButton:
-    :commit: 6c2a30a548d1f44e78b54571e616d637c92b5206
-    :git: https://github.com/yoavlt/LiquidFloatingActionButton
   Spring:
     :commit: 18d5c7b74489de8044e34767f856d1e574f0820e
     :git: https://github.com/MengTo/Spring.git
@@ -104,7 +95,6 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
   JTSImageViewController: 1f8ce1cc93dab0d0af8e53badeea7528560cfec9
-  LiquidFloatingActionButton: dcdae1e59eb07eccbf60c027001a4d6731c345c9
   PullToBounce: d2c6300b92fa124f7133e0ca0088bbf7a7059194
   ReactiveCocoa: e459ea92099447802df20c4735e31e8139b06094
   RESideMenu: f24c508404b49c667344c54aba7e590883533958

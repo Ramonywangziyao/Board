@@ -58,6 +58,15 @@
 		882FD2D21C2F8E06008B2E95 /* BillTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */; };
 		88AF414E1C3F320300B2FEB8 /* AlterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF414D1C3F320300B2FEB8 /* AlterManager.swift */; };
 		88AF419C1C3F6C0400B2FEB8 /* refund@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AF419B1C3F6C0400B2FEB8 /* refund@2x.png */; };
+		88AF41AD1C42F26C00B2FEB8 /* BaseFloatingButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41AC1C42F26C00B2FEB8 /* BaseFloatingButtonExtension.swift */; };
+		88AF41B91C42F2FC00B2FEB8 /* ArrayEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B01C42F2FC00B2FEB8 /* ArrayEx.swift */; };
+		88AF41BA1C42F2FC00B2FEB8 /* CGPointEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B11C42F2FC00B2FEB8 /* CGPointEx.swift */; };
+		88AF41BB1C42F2FC00B2FEB8 /* CGRectEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B21C42F2FC00B2FEB8 /* CGRectEx.swift */; };
+		88AF41BC1C42F2FC00B2FEB8 /* LiquidFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B31C42F2FC00B2FEB8 /* LiquidFloatingActionButton.swift */; };
+		88AF41BD1C42F2FC00B2FEB8 /* LiquidUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B41C42F2FC00B2FEB8 /* LiquidUtil.swift */; };
+		88AF41BE1C42F2FC00B2FEB8 /* LiquittableCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B51C42F2FC00B2FEB8 /* LiquittableCircle.swift */; };
+		88AF41BF1C42F2FC00B2FEB8 /* SimpleCircleLiquidEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B61C42F2FC00B2FEB8 /* SimpleCircleLiquidEngine.swift */; };
+		88AF41C01C42F2FC00B2FEB8 /* UIColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AF41B71C42F2FC00B2FEB8 /* UIColorEx.swift */; };
 		88B518811C312135009AE721 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518801C312135009AE721 /* camera@2x.png */; };
 		88B518851C312258009AE721 /* writeBill@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518841C312258009AE721 /* writeBill@2x.png */; };
 		88B518891C3123A7009AE721 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518881C3123A7009AE721 /* menu@2x.png */; };
@@ -67,6 +76,7 @@
 		88B518931C312D49009AE721 /* empty_people_img@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B518921C312D49009AE721 /* empty_people_img@2x.png */; };
 		88B518981C321871009AE721 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B518971C321871009AE721 /* LoginViewController.swift */; };
 		88B5189A1C3235F4009AE721 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B518991C3235F4009AE721 /* UserService.swift */; };
+		88DA49A91C42F67E00A6EE25 /* TopBarSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA49A81C42F67E00A6EE25 /* TopBarSegmentControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +156,15 @@
 		882FD2D11C2F8E06008B2E95 /* BillTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillTableViewExtension.swift; sourceTree = "<group>"; };
 		88AF414D1C3F320300B2FEB8 /* AlterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterManager.swift; sourceTree = "<group>"; };
 		88AF419B1C3F6C0400B2FEB8 /* refund@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refund@2x.png"; sourceTree = "<group>"; };
+		88AF41AC1C42F26C00B2FEB8 /* BaseFloatingButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFloatingButtonExtension.swift; sourceTree = "<group>"; };
+		88AF41B01C42F2FC00B2FEB8 /* ArrayEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayEx.swift; sourceTree = "<group>"; };
+		88AF41B11C42F2FC00B2FEB8 /* CGPointEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointEx.swift; sourceTree = "<group>"; };
+		88AF41B21C42F2FC00B2FEB8 /* CGRectEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectEx.swift; sourceTree = "<group>"; };
+		88AF41B31C42F2FC00B2FEB8 /* LiquidFloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidFloatingActionButton.swift; sourceTree = "<group>"; };
+		88AF41B41C42F2FC00B2FEB8 /* LiquidUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquidUtil.swift; sourceTree = "<group>"; };
+		88AF41B51C42F2FC00B2FEB8 /* LiquittableCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiquittableCircle.swift; sourceTree = "<group>"; };
+		88AF41B61C42F2FC00B2FEB8 /* SimpleCircleLiquidEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCircleLiquidEngine.swift; sourceTree = "<group>"; };
+		88AF41B71C42F2FC00B2FEB8 /* UIColorEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorEx.swift; sourceTree = "<group>"; };
 		88B518801C312135009AE721 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		88B518841C312258009AE721 /* writeBill@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "writeBill@2x.png"; sourceTree = "<group>"; };
 		88B518881C3123A7009AE721 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
@@ -156,6 +175,7 @@
 		88B518941C31B3E5009AE721 /* Board-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Board-Bridging-Header.h"; sourceTree = "<group>"; };
 		88B518971C321871009AE721 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88B518991C3235F4009AE721 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		88DA49A81C42F67E00A6EE25 /* TopBarSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarSegmentControl.swift; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +313,7 @@
 				882FD2C11C2F73A7008B2E95 /* BillTableViewCell.swift */,
 				88257B681C34F1DC00B40B0F /* CellAnimator.swift */,
 				88B518901C312AEF009AE721 /* BalanceTableViewCell.swift */,
+				88DA49A81C42F67E00A6EE25 /* TopBarSegmentControl.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -309,6 +330,7 @@
 		8822A0981C2E8AF8007D66DB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				88AF41AE1C42F2FC00B2FEB8 /* FloatingButton */,
 				88257B991C3702C600B40B0F /* ZFModalTransitionAnimator */,
 				8822A09B1C2E8B36007D66DB /* WYExtensionUtil */,
 			);
@@ -408,9 +430,25 @@
 			children = (
 				88B518971C321871009AE721 /* LoginViewController.swift */,
 				8822A0331C2E8570007D66DB /* BaseViewController.swift */,
+				88AF41AC1C42F26C00B2FEB8 /* BaseFloatingButtonExtension.swift */,
 				88257B6E1C35A31400B40B0F /* BaseViewControllerSegues.swift */,
 			);
 			name = Start;
+			sourceTree = "<group>";
+		};
+		88AF41AE1C42F2FC00B2FEB8 /* FloatingButton */ = {
+			isa = PBXGroup;
+			children = (
+				88AF41B01C42F2FC00B2FEB8 /* ArrayEx.swift */,
+				88AF41B11C42F2FC00B2FEB8 /* CGPointEx.swift */,
+				88AF41B21C42F2FC00B2FEB8 /* CGRectEx.swift */,
+				88AF41B31C42F2FC00B2FEB8 /* LiquidFloatingActionButton.swift */,
+				88AF41B41C42F2FC00B2FEB8 /* LiquidUtil.swift */,
+				88AF41B51C42F2FC00B2FEB8 /* LiquittableCircle.swift */,
+				88AF41B61C42F2FC00B2FEB8 /* SimpleCircleLiquidEngine.swift */,
+				88AF41B71C42F2FC00B2FEB8 /* UIColorEx.swift */,
+			);
+			path = FloatingButton;
 			sourceTree = "<group>";
 		};
 		A2A6A6DC28C108286191AD84 /* Frameworks */ = {
@@ -612,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B518981C321871009AE721 /* LoginViewController.swift in Sources */,
+				88DA49A91C42F67E00A6EE25 /* TopBarSegmentControl.swift in Sources */,
 				8822A0C11C2E8B36007D66DB /* WYExtensionUIView.swift in Sources */,
 				8822A0C01C2E8B36007D66DB /* WYExtensionUITextField.swift in Sources */,
 				8822A0BA1C2E8B36007D66DB /* WYExtensionUIButton.swift in Sources */,
@@ -624,6 +663,7 @@
 				88B5188D1C31294E009AE721 /* BalanceTableViewExtension.swift in Sources */,
 				8822A0341C2E8570007D66DB /* BaseViewController.swift in Sources */,
 				8822A0321C2E8570007D66DB /* AppDelegate.swift in Sources */,
+				88AF41BD1C42F2FC00B2FEB8 /* LiquidUtil.swift in Sources */,
 				88257B711C35A3E800B40B0F /* DetailBillViewController.swift in Sources */,
 				8802515C1C3CFCF800A507F4 /* ZFModalTransitionAnimator.m in Sources */,
 				8822A0601C2E885C007D66DB /* BillViewController.swift in Sources */,
@@ -638,25 +678,33 @@
 				8822A0BB1C2E8B36007D66DB /* WYExtensionUIColor.swift in Sources */,
 				8822A0B71C2E8B36007D66DB /* WYExtensionNSUserDefault.swift in Sources */,
 				88257B5D1C339CA300B40B0F /* Board.swift in Sources */,
+				88AF41AD1C42F26C00B2FEB8 /* BaseFloatingButtonExtension.swift in Sources */,
 				88257B5F1C339CAE00B40B0F /* Person.swift in Sources */,
 				8822A0CC1C2F107D007D66DB /* DefaultConstants.swift in Sources */,
 				8822A0BD1C2E8B36007D66DB /* WYExtensionUIImageView.swift in Sources */,
 				88257B5B1C339C8F00B40B0F /* Bill.swift in Sources */,
 				88B5188C1C31294E009AE721 /* BalanceEmptyDataExtension.swift in Sources */,
 				882FD2C61C2F8380008B2E95 /* BillTableView.swift in Sources */,
+				88AF41BE1C42F2FC00B2FEB8 /* LiquittableCircle.swift in Sources */,
 				8822A0B61C2E8B36007D66DB /* WYExtensionNSDate.swift in Sources */,
 				882FD2C41C2F7CBF008B2E95 /* WYCGRectExtension.swift in Sources */,
+				88AF41B91C42F2FC00B2FEB8 /* ArrayEx.swift in Sources */,
 				88257B691C34F1DC00B40B0F /* CellAnimator.swift in Sources */,
 				8822A0B11C2E8B36007D66DB /* WYExtensionArchiving.swift in Sources */,
 				88257B6F1C35A31400B40B0F /* BaseViewControllerSegues.swift in Sources */,
+				88AF41BC1C42F2FC00B2FEB8 /* LiquidFloatingActionButton.swift in Sources */,
+				88AF41C01C42F2FC00B2FEB8 /* UIColorEx.swift in Sources */,
 				8822A0AF1C2E8B36007D66DB /* Async.swift in Sources */,
 				8822A0621C2E886C007D66DB /* BalanceViewController.swift in Sources */,
 				882FD2D21C2F8E06008B2E95 /* BillTableViewExtension.swift in Sources */,
 				8822A0B41C2E8B36007D66DB /* WYExtensionGCD.swift in Sources */,
 				8822A0BE1C2E8B36007D66DB /* WYExtensionUILabel.swift in Sources */,
+				88AF41BA1C42F2FC00B2FEB8 /* CGPointEx.swift in Sources */,
+				88AF41BB1C42F2FC00B2FEB8 /* CGRectEx.swift in Sources */,
 				8822A0B21C2E8B36007D66DB /* WYExtensionCollectionType.swift in Sources */,
 				8822A0C51C2F0DC3007D66DB /* MenuRootViewController.swift in Sources */,
 				8822A0B81C2E8B36007D66DB /* WYExtensionSoundPlayer.swift in Sources */,
+				88AF41BF1C42F2FC00B2FEB8 /* SimpleCircleLiquidEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

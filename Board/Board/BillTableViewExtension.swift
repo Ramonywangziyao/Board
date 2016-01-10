@@ -38,6 +38,17 @@ extension BillViewController: UITableViewDelegate, UITableViewDataSource {
         self.performSegueWithIdentifier(SegueIdentifier.DetailBill, sender: self)
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let velocity = scrollView.panGestureRecognizer.velocityInView(self.tableView).y
+        let floatingButton = (self.parentViewController as! BaseViewController).floatingActionButton
+        if floatingButton.isClosed == false { floatingButton.close() }
+        if velocity.isSignMinus {
+            floatingButton.animate(isAppearing: false)
+        } else if velocity > 32 {
+            floatingButton.animate(isAppearing: true)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == SegueIdentifier.DetailBill {
             let detailBillViewController = segue.destinationViewController as! DetailBillViewController
