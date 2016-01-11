@@ -40,7 +40,17 @@ extension BaseViewController: LiquidFloatingActionButtonDataSource, LiquidFloati
     }
     
     func liquidFloatingActionButton(liquidFloatingActionButton: LiquidFloatingActionButton, didSelectItemAtIndex index: Int) {
-        print("did Tapped! \(index)")
+        switch index {
+        case 0:
+            self.performSegueWithIdentifier(SegueIdentifier.AddBill, sender: self)
+            break
+        case 1:
+            break
+        case 2:
+            break
+        default:
+            break
+        }
         liquidFloatingActionButton.close()
     }
     

@@ -16,7 +16,7 @@ class Board: NSObject {
     var creator: Person!
     var members: [Person]!
     var bills: [Bill]!
-    var status: String!
+    var isCleared: Bool!
     var createdAt: NSDate!
     
     override init() {
