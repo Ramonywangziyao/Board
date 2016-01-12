@@ -25,12 +25,13 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
         segmentControl.addTarget(self, action: "segmentControlDidChanged:", forControlEvents: UIControlEvents.ValueChanged)
         setupFloatingButton()
         
-//        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString("test")
-//        let person = Person(_id: "hahaha", facebookId: "ewr", accessToken: "1235343523", bills: nil, boards: nil, createdAt: NSDate(), lastLoginAt: NSDate())
-//        let object = Bill(_id: "lllId", title: "Title", time: NSDate(), photoId: "haha", amounts: [person: 1234], isPaid: true, creator: person, isDeleted: false)
-//        NSKeyedArchiver.archiveRootObject(object, toFile: path)
-//        let lll = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as! Bill
-//        print(lll.creator.facebookId)
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString("test")
+        let person = Person(_id: "hahaha", facebookId: "ewr", accessToken: "1235343523", bills: nil, boards: nil, createdAt: NSDate(), lastLoginAt: NSDate())
+        let bill = Bill(_id: "lllId", title: "Title", time: NSDate(), photoId: "haha", amounts: [person._id: 1234], isPaid: true, creator: person, isDeleted: false)
+        let board = Board(_id: "thisBoard", name: "ABoard", isActive: true, creator: person, members: [person], bills: [bill], isCleared: false, createdAt: NSDate())
+        NSKeyedArchiver.archiveRootObject(board, toFile: path)
+        let lll = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as! Board
+        print(lll.members.first?._id)
     }
     
     override func viewDidAppear(animated: Bool) {

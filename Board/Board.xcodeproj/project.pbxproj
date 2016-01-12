@@ -77,6 +77,7 @@
 		88B518981C321871009AE721 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B518971C321871009AE721 /* LoginViewController.swift */; };
 		88B5189A1C3235F4009AE721 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B518991C3235F4009AE721 /* UserService.swift */; };
 		88DA49A91C42F67E00A6EE25 /* TopBarSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA49A81C42F67E00A6EE25 /* TopBarSegmentControl.swift */; };
+		88DA49AB1C44CA7C00A6EE25 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA49AA1C44CA7B00A6EE25 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,7 @@
 		88B518971C321871009AE721 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		88B518991C3235F4009AE721 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		88DA49A81C42F67E00A6EE25 /* TopBarSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarSegmentControl.swift; sourceTree = "<group>"; };
+		88DA49AA1C44CA7B00A6EE25 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F3A2D56B4AF640D7834D2326 /* Pods-Board.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Board.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Board/Pods-Board.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -289,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				88B518991C3235F4009AE721 /* UserService.swift */,
+				88DA49AA1C44CA7B00A6EE25 /* DataService.swift */,
 				8822A0641C2E8895007D66DB /* WebService.swift */,
 				8822A0CB1C2F107D007D66DB /* DefaultConstants.swift */,
 				88AF414D1C3F320300B2FEB8 /* AlterManager.swift */,
@@ -655,6 +658,7 @@
 				8822A0C01C2E8B36007D66DB /* WYExtensionUITextField.swift in Sources */,
 				8822A0BA1C2E8B36007D66DB /* WYExtensionUIButton.swift in Sources */,
 				8822A0BC1C2E8B36007D66DB /* WYExtensionUIImage.swift in Sources */,
+				88DA49AB1C44CA7C00A6EE25 /* DataService.swift in Sources */,
 				88257B741C35E3F700B40B0F /* AddBillViewController.swift in Sources */,
 				882FD2C21C2F73A7008B2E95 /* BillTableViewCell.swift in Sources */,
 				8822A0CE1C2F55F9007D66DB /* BillEmptyDataExtension.swift in Sources */,

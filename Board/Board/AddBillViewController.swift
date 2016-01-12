@@ -24,9 +24,12 @@ class AddBillViewController: UIViewController {
             .map { $0.stringByTrimmingCharactersInSet(NSCharacterSet(charactersInString: "0123456789.").invertedSet) }
             .map { return $0 == "" ? "0" : $0 }
             .startWithNext {
-                print($0)
                 self.billAmountTextField.text = $0 == "0" ? "" : $0
         }
     }
 
+    @IBAction func exitButtonDidClicked(sender: UIButton) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }

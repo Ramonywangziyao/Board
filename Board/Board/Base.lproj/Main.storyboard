@@ -31,7 +31,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Bill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-si-odN">
-                                                            <rect key="frame" x="0.0" y="28" width="375" height="24"/>
+                                                            <rect key="frame" x="0.0" y="32" width="375" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="24" id="328-26-Ak5"/>
                                                             </constraints>
@@ -40,7 +40,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bill Title" clearsOnBeginEditing="YES" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0sb-1A-W3O" customClass="JiroTextField" customModule="TextFieldEffects">
-                                                            <rect key="frame" x="16" y="52" width="343" height="56"/>
+                                                            <rect key="frame" x="16" y="56" width="343" height="56"/>
                                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="56" id="U5t-vk-UJT"/>
@@ -60,7 +60,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </textField>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bill Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-99-iHF" customClass="JiroTextField" customModule="TextFieldEffects">
-                                                            <rect key="frame" x="16" y="108" width="343" height="56"/>
+                                                            <rect key="frame" x="16" y="112" width="343" height="56"/>
                                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="72" id="Ewf-W5-V7X"/>
@@ -90,17 +90,30 @@
                                                                 </mask>
                                                             </variation>
                                                         </textField>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llM-wg-vy0">
+                                                            <rect key="frame" x="329" y="32" width="30" height="24"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                                            <state key="normal" title="X">
+                                                                <color key="titleColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="exitButtonDidClicked:" destination="oos-2U-Lic" eventType="touchUpInside" id="en5-r3-OoQ"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="0sb-1A-W3O" secondAttribute="trailing" constant="16" id="1Bm-rn-UyD"/>
                                                         <constraint firstAttribute="trailing" secondItem="gxe-si-odN" secondAttribute="trailing" id="BUm-aj-WyA"/>
-                                                        <constraint firstItem="gxe-si-odN" firstAttribute="top" secondItem="uKC-gp-Mao" secondAttribute="top" constant="28" id="C8i-aU-130"/>
+                                                        <constraint firstItem="gxe-si-odN" firstAttribute="top" secondItem="uKC-gp-Mao" secondAttribute="top" constant="32" id="C8i-aU-130"/>
+                                                        <constraint firstItem="llM-wg-vy0" firstAttribute="top" secondItem="gxe-si-odN" secondAttribute="top" id="CMx-Qp-eWt"/>
                                                         <constraint firstItem="gxe-si-odN" firstAttribute="top" secondItem="uKC-gp-Mao" secondAttribute="top" id="Hsb-9q-efi"/>
                                                         <constraint firstAttribute="trailing" secondItem="ePV-99-iHF" secondAttribute="trailing" constant="16" id="ODa-aE-w3Y"/>
+                                                        <constraint firstAttribute="trailing" secondItem="llM-wg-vy0" secondAttribute="trailing" constant="16" id="Sx9-kS-zCl"/>
                                                         <constraint firstItem="ePV-99-iHF" firstAttribute="leading" secondItem="uKC-gp-Mao" secondAttribute="leading" constant="16" id="T8I-PH-3Ub"/>
                                                         <constraint firstAttribute="height" constant="1000" id="TLh-OJ-Zxn"/>
                                                         <constraint firstItem="ePV-99-iHF" firstAttribute="height" secondItem="0sb-1A-W3O" secondAttribute="height" id="VGN-Ee-ylM"/>
+                                                        <constraint firstItem="llM-wg-vy0" firstAttribute="height" secondItem="gxe-si-odN" secondAttribute="height" id="Vqs-nJ-TgI"/>
                                                         <constraint firstItem="gxe-si-odN" firstAttribute="leading" secondItem="uKC-gp-Mao" secondAttribute="leading" id="XwF-d2-Ecv"/>
                                                         <constraint firstItem="0sb-1A-W3O" firstAttribute="top" secondItem="gxe-si-odN" secondAttribute="bottom" id="iNH-7r-SQa"/>
                                                         <constraint firstItem="0sb-1A-W3O" firstAttribute="leading" secondItem="uKC-gp-Mao" secondAttribute="leading" constant="16" id="tQK-TO-UhT"/>
@@ -444,6 +457,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.21730047464370728" green="0.33415520191192627" blue="0.61228710412979126" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

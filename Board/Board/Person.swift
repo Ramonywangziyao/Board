@@ -10,13 +10,13 @@ import UIKit
 
 class Person: NSObject, NSCoding {
     
-    var _id: String!
-    var facebookId: String!
-    var accessToken: String!
-    var bills: [Bill]!
-    var boards: [Board]!
-    var createdAt: NSDate!
-    var lastLoginAt: NSDate!
+    var _id: String
+    var facebookId: String
+    var accessToken: String
+    var bills: [String]?
+    var boards: [String]?
+    var createdAt: NSDate
+    var lastLoginAt: NSDate
 
     struct Keys {
         static let _id = "PersonId"
@@ -28,7 +28,7 @@ class Person: NSObject, NSCoding {
         static let lastLoginAt = "PersonLastLoginAt"
     }
     
-    init(_id: String, facebookId: String, accessToken: String, bills: [Bill]?, boards: [Board]?, createdAt: NSDate, lastLoginAt: NSDate) {
+    init(_id: String, facebookId: String, accessToken: String, bills: [String]?=nil, boards: [String]?=nil, createdAt: NSDate, lastLoginAt: NSDate) {
         self._id = _id
         self.facebookId = facebookId
         self.accessToken = accessToken
@@ -39,13 +39,14 @@ class Person: NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        let _id = aDecoder.decodeObjectForKey(Keys._id) as? String
-        let facebookId = aDecoder.decodeObjectForKey(Keys.facebookId) as? String
-        let accessToken = aDecoder.decodeObjectForKey(Keys.accessToken) as? String
-        let bills = aDecoder.decodeObjectForKey(Keys.bills) as? [Bill]
-        let boards = aDecoder.decodeObjectForKey(Keys.boards) as? [Board]
-        let createdAt = aDecoder.decodeObjectForKey(Keys.createdAt) as? NSDate
-        let lastLoginAt = aDecoder.decodeObjectForKey(Keys.lastLoginAt) as? NSDate
+        guard let _id = aDecoder.decodeObjectForKey(Keys._id) as? String,
+            let facebookId = aDecoder.decodeObjectForKey(Keys.facebookId) as? String,
+            let accessToken = aDecoder.decodeObjectForKey(Keys.accessToken) as? String,
+            let bills = aDecoder.decodeObjectForKey(Keys.bills) as? [String]?,
+            let boards = aDecoder.decodeObjectForKey(Keys.boards) as? [String]?,
+            let createdAt = aDecoder.decodeObjectForKey(Keys.createdAt) as? NSDate,
+            let lastLoginAt = aDecoder.decodeObjectForKey(Keys.lastLoginAt) as? NSDate
+            else { fatalError() }
         self._id = _id
         self.facebookId = facebookId
         self.accessToken = accessToken
@@ -61,7 +62,7 @@ class Person: NSObject, NSCoding {
         aCoder.encodeObject(accessToken, forKey: Keys.accessToken)
         aCoder.encodeObject(bills, forKey: Keys.bills)
         aCoder.encodeObject(boards, forKey: Keys.boards)
-        aCoder.encodeObject(facebookId, forKey: Keys.facebookId)
+        aCoder.encodeObject(createdAt, forKey: Keys.createdAt)
         aCoder.encodeObject(lastLoginAt, forKey: Keys.lastLoginAt)
     }
     
