@@ -30,15 +30,15 @@ class Bill: NSObject, NSCoding {
         static let isDeleted = "BillIsDeleted"
     }
     
-    init(_id: String, title: String, time: NSDate, photoId: String, amounts: [String: Double], isPaid: Bool, creator: Person, isDeleted: Bool) {
+    init(_id: String, title: String, time: NSDate, photoId: String, amounts: [String: Double], creator: Person) {
         self._id = _id
         self.title = title
         self.time = time
         self.photoId = photoId
         self.amounts = amounts
-        self.isPaid = isPaid
         self.creator = creator
-        self.isDeleted = isDeleted
+        self.isDeleted = false
+        self.isPaid = false
         super.init()
     }
 
