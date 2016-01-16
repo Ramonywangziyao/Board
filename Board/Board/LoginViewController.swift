@@ -60,7 +60,7 @@ class LoginViewController: UIViewController {
                 print(UserInfo.getUserName())
                 print(UserInfo.getUserEmail())
                 print(UserInfo.getUserPortrait())
-                print(UserInfo.getUserCoverPhoto())
+                print(UserInfo.getUserCoverPhoto() ?? "No Cover Photo")
                 self.performSegueWithIdentifier(SegueIdentifier.Login, sender: nil)
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
                 UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent

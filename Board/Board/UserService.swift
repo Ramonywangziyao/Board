@@ -34,8 +34,8 @@ class UserService: NSObject {
         return userDefault.stringForKey(UserKeys.Id) ?? ""
     }
     
-    func getUserCoverPhoto() -> String {
-        return userDefault.stringForKey(UserKeys.CoverPhoto) ?? ""
+    func getUserCoverPhoto() -> String? {
+        return userDefault.stringForKey(UserKeys.CoverPhoto)
     }
     
     lazy var isLoggedIn: () -> Bool = {
@@ -51,7 +51,11 @@ class UserService: NSObject {
                     self.userDefault.setObject(result["name"], forKey: UserKeys.Name)
                     self.userDefault.setObject(result["email"], forKey: UserKeys.Email)
                     self.userDefault.setObject(((result["picture"]! as! [String: AnyObject])["data"]! as! [String: AnyObject])["url"]!, forKey: UserKeys.Portrait)
-                    self.userDefault.setObject((result["cover"] as! [String: AnyObject])["source"], forKey: UserKeys.CoverPhoto)
+                    if let coverPhotoPath = (result["cover"] as? [String: AnyObject]) {
+                        self.userDefault.setObject(coverPhotoPath["source"], forKey: UserKeys.CoverPhoto)
+                    } else {
+                        self.userDefault.setNilValueForKey(UserKeys.CoverPhoto)
+                    }
                     self.userDefault.synchronize()
                     //TODO: upload facebook user data to server
                     completion(succ: true, error: nil, result: nil)
