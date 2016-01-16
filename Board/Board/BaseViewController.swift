@@ -12,18 +12,28 @@ import Spring
 
 class BaseViewController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var topBarView: DesignableView!
+    @IBOutlet weak var billTableButton: UIButton!
+    @IBOutlet weak var balanceTableButton: UIButton!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    
     var animator: ZFModalTransitionAnimator!
     var floatingActionButton: LiquidFloatingActionButton!
     var cells: [LiquidFloatingCell] = []
+    var currentSegmentIndex = 0 {
+        didSet {
+            let point = CGPointMake(CGFloat(currentSegmentIndex)  * UIScreen.mainScreenWidth, 0)
+            mainScrollView.setContentOffset(point, animated: true)
+            self.floatingActionButton.animate(isAppearing: currentSegmentIndex == 0)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mainScrollView.delegate = self
-        segmentControl.addTarget(self, action: "segmentControlDidChanged:", forControlEvents: UIControlEvents.ValueChanged)
         setupFloatingButton()
+        setupBackgroundView()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -38,26 +48,45 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
-    func segmentControlDidChanged(segmentControl: UISegmentedControl) {
-        let point = CGPointMake(UIScreen.mainScreenWidth * CGFloat(segmentControl.selectedSegmentIndex), 0)
-        mainScrollView.setContentOffset(point, animated: true)
-        self.floatingActionButton.animate(isAppearing: (segmentControl.selectedSegmentIndex == 0))
+    @IBAction func billTableButtonDidClicked(sender: UIButton) {
+        currentSegmentIndex = 0
     }
+    
+    @IBAction func balanceTableButtonDidClicked(sender: UIButton) {
+        currentSegmentIndex = 1
+    }
+    
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         if let scrollView = mainScrollView {
-            segmentControl.selectedSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.mainScreenWidth)
-            if segmentControl.selectedSegmentIndex == 1 {
+            currentSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.mainScreenWidth)
+            if currentSegmentIndex == 1 {
                 if let navigationController = self.navigationController as? ScrollingNavigationController {
                     navigationController.showNavbar(animated: true)
                 }
             }
-            self.floatingActionButton.animate(isAppearing: (segmentControl.selectedSegmentIndex == 0))
+            self.floatingActionButton.animate(isAppearing: currentSegmentIndex == 0)
         }
     }
     
     @IBAction func menuButtonDidPressed(sender: UIBarButtonItem) {
         self.sideMenuViewController.presentLeftMenuViewController()
+    }
+    
+    func setupBackgroundView() {
+        self.backgroundImageView.image = UIImage(named: "menu_background")
+        var motionEffects: UIMotionEffectGroup {
+            let yTilt = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
+            yTilt.minimumRelativeValue = 12
+            yTilt.maximumRelativeValue = 12
+            let xTilt = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
+            xTilt.minimumRelativeValue = 12
+            xTilt.maximumRelativeValue = 12
+            let effects = UIMotionEffectGroup()
+            effects.motionEffects = [yTilt, xTilt]
+            return effects
+        }
+        self.backgroundImageView.addMotionEffect(motionEffects)
     }
  
 }
