@@ -26,10 +26,11 @@ class DataService: NSObject {
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString("test")
         let person = Person(_id: "hahaha", facebookId: "ewr", accessToken: "1235343523", bills: nil, boards: nil, createdAt: NSDate(), lastLoginAt: NSDate())
         let bill = Bill(_id: "lllId", title: "Title", time: NSDate(), photoId: "haha", amounts: [person._id: 1234], isPaid: true, creator: person, isDeleted: false)
-        let board = Board(_id: "thisBoard", name: "ABoard", isActive: true, creator: person, members: [person], bills: [bill], isCleared: false, createdAt: NSDate())
+        let board = Board(_id: "BoardId", name: "A Board", creator: person, createdAt: NSDate())
+        board.bills = [bill]
         NSKeyedArchiver.archiveRootObject(board, toFile: path)
         let lll = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as! Board
-        print(lll.members.first?._id)
+        print(lll.creator._id)
     }
     
 }
