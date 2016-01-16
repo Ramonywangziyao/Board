@@ -37,7 +37,7 @@ class BillTableViewCell: UITableViewCell {
     
     func fakeView(view: UIView) {
         let iconMock = UIView()
-        iconMock.backgroundColor = UIColor.fb_lightBlue()
+        iconMock.backgroundColor = UIColor.fb_white()
         iconMock.frame = CGRect(x: 16, y: 16, width: 60, height: 60)
         iconMock.layer.cornerRadius = 10
         view.addSubview(iconMock)
@@ -51,7 +51,7 @@ class BillTableViewCell: UITableViewCell {
         func addLine(frame:CGRect) {
             let line = UIView(frame:frame)
             line.layer.cornerRadius = frame.height / 2
-            line.backgroundColor = UIColor.fb_lightBlue()
+            line.backgroundColor = UIColor.fb_white()
             view.addSubview(line)
         }
         addLine(line1)

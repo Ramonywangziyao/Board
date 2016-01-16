@@ -29,6 +29,13 @@ extension BaseViewController: LiquidFloatingActionButtonDataSource, LiquidFloati
         floatingActionButton = createButton(floatingFrame, .Up)
         floatingActionButton.color = UIColor.fb_mediumBlue()
         self.view.addSubview(floatingActionButton)
+        setupFloatingButtonPanAnimation()
+    }
+    
+    func setupFloatingButtonPanAnimation() {
+        let panGesture = UIPanGestureRecognizer(target: self, action: "panned:")
+        self.view.addGestureRecognizer(panGesture)
+        panAnimator = UIDynamicAnimator(referenceView: self.view)
     }
     
     func numberOfCells(liquidFloatingActionButton: LiquidFloatingActionButton) -> Int {
@@ -54,5 +61,21 @@ extension BaseViewController: LiquidFloatingActionButtonDataSource, LiquidFloati
         liquidFloatingActionButton.close()
     }
     
+    func panned(sender: UIPanGestureRecognizer) {
+        let touchPointView = sender.locationInView(self.view)
+        let touchPointButton = sender.locationInView(self.floatingActionButton)
+        if sender.state == UIGestureRecognizerState.Began {
+            panAnimator.removeAllBehaviors()
+            let centerOffset = UIOffsetMake(touchPointButton.x - CGRectGetMidX(floatingActionButton.bounds), touchPointButton.y - CGRectGetMidY(floatingActionButton.bounds))
+            attachmentBehavior = UIAttachmentBehavior(item: floatingActionButton, offsetFromCenter: centerOffset, attachedToAnchor: touchPointView)
+            panAnimator.addBehavior(attachmentBehavior)
+        } else if sender.state == UIGestureRecognizerState.Changed {
+            attachmentBehavior.anchorPoint = touchPointView
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            panAnimator.removeBehavior(attachmentBehavior)
+            snapBehavior = UISnapBehavior(item: floatingActionButton, snapToPoint: snapPoint)
+            panAnimator.addBehavior(snapBehavior)
+        }
+    }
  
 }

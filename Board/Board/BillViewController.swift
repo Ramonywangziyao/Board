@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PullToBounce
 import AMScrollingNavbar
 
 class BillViewController: UIViewController {

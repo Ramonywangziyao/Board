@@ -21,11 +21,27 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
     var animator: ZFModalTransitionAnimator!
     var floatingActionButton: LiquidFloatingActionButton!
     var cells: [LiquidFloatingCell] = []
+    var snapPoint = CGPointZero
+    var panAnimator: UIDynamicAnimator!
+    var snapBehavior: UISnapBehavior!
+    var attachmentBehavior: UIAttachmentBehavior!
     var currentSegmentIndex = 0 {
         didSet {
             let point = CGPointMake(CGFloat(currentSegmentIndex)  * UIScreen.mainScreenWidth, 0)
             mainScrollView.setContentOffset(point, animated: true)
-            self.floatingActionButton.animate(isAppearing: currentSegmentIndex == 0)
+            floatingButtonActionWhenSegmentChanged()
+        }
+    }
+    var floatingButtonActionWhenSegmentChanged: () -> () {
+        return {
+            if self.currentSegmentIndex == 1 {
+                if self.floatingActionButton.isClosed == false { self.floatingActionButton.close() }
+                dispatch_delay(0.3) {
+                    self.floatingActionButton.animate(isAppearing: false)
+                }
+            } else {
+                self.floatingActionButton.animate(isAppearing: true)
+            }
         }
     }
     
@@ -46,6 +62,7 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
                 make.height.equalTo(Constants.TopBarHeight)
             }
         }
+        snapPoint = floatingActionButton.center
     }
 
     @IBAction func billTableButtonDidClicked(sender: UIButton) {
@@ -54,19 +71,6 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func balanceTableButtonDidClicked(sender: UIButton) {
         currentSegmentIndex = 1
-    }
-    
-    
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        if let scrollView = mainScrollView {
-            currentSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.mainScreenWidth)
-            if currentSegmentIndex == 1 {
-                if let navigationController = self.navigationController as? ScrollingNavigationController {
-                    navigationController.showNavbar(animated: true)
-                }
-            }
-            self.floatingActionButton.animate(isAppearing: currentSegmentIndex == 0)
-        }
     }
     
     @IBAction func menuButtonDidPressed(sender: UIBarButtonItem) {
@@ -86,6 +90,18 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
             return effects
         }
         self.backgroundImageView.addMotionEffect(motionEffects)
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        if let scrollView = mainScrollView {
+            currentSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.mainScreenWidth)
+            if currentSegmentIndex == 1 {
+                if let navigationController = self.navigationController as? ScrollingNavigationController {
+                    navigationController.showNavbar(animated: false)
+                }
+            }
+            floatingButtonActionWhenSegmentChanged()
+        }
     }
  
 }
