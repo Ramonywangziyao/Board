@@ -10,25 +10,31 @@ import UIKit
 
 class DataService: NSObject {
     
-    
-    
-    private let billPath = {
-        return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString("bill")
+    static var currentBoard: Board? {
+        willSet {
+            if let board = currentBoard {
+                board.saveToFile()
+            }
+        }
     }
     
-    private let PersonPath = {
-        return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString("person")
+    class func saveBoard(board: Board) {
+        board.saveToFile()
     }
     
-    private let BoardPath = {
-        return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString("board")
+    class func filenameGenerate(object: AnyObject) -> String {
+        var filename = ""
+        if let board = object as? Board {
+            filename = SeralizationKeys.Board + board._id
+        } else {
+            fatalError()
+        }
+        return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString(filename)
     }
     
-    func test() {
-        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString("test")
-        NSKeyedArchiver.archiveRootObject(board, toFile: path)
-        let lll = NSKeyedUnarchiver.unarchiveObjectWithFile(path) as! Board
-        print(lll.creator._id)
+    class func getBoard(id _id: String) -> Board? {
+        let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString(SeralizationKeys.Board + _id)
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? Board
     }
     
 }

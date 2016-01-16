@@ -8,6 +8,6 @@
 
 import UIKit
 
-class WebService: NSObject {
+class APIService: NSObject {
 
 }

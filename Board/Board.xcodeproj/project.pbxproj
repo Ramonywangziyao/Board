@@ -18,7 +18,7 @@
 		8822A0521C2E8570007D66DB /* BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0511C2E8570007D66DB /* BoardUITests.swift */; };
 		8822A0601C2E885C007D66DB /* BillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A05F1C2E885C007D66DB /* BillViewController.swift */; };
 		8822A0621C2E886C007D66DB /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0611C2E886C007D66DB /* BalanceViewController.swift */; };
-		8822A0651C2E8895007D66DB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0641C2E8895007D66DB /* WebService.swift */; };
+		8822A0651C2E8895007D66DB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A0641C2E8895007D66DB /* APIService.swift */; };
 		8822A0AF1C2E8B36007D66DB /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A09C1C2E8B36007D66DB /* Async.swift */; };
 		8822A0B01C2E8B36007D66DB /* WYExtensionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A09D1C2E8B36007D66DB /* WYExtensionAnimation.swift */; };
 		8822A0B11C2E8B36007D66DB /* WYExtensionArchiving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822A09E1C2E8B36007D66DB /* WYExtensionArchiving.swift */; };
@@ -119,7 +119,7 @@
 		8822A0531C2E8570007D66DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8822A05F1C2E885C007D66DB /* BillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillViewController.swift; sourceTree = "<group>"; };
 		8822A0611C2E886C007D66DB /* BalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
-		8822A0641C2E8895007D66DB /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		8822A0641C2E8895007D66DB /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		8822A09C1C2E8B36007D66DB /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		8822A09D1C2E8B36007D66DB /* WYExtensionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYExtensionAnimation.swift; sourceTree = "<group>"; };
 		8822A09E1C2E8B36007D66DB /* WYExtensionArchiving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WYExtensionArchiving.swift; sourceTree = "<group>"; };
@@ -296,7 +296,7 @@
 			children = (
 				88B518991C3235F4009AE721 /* UserService.swift */,
 				88DA49AA1C44CA7B00A6EE25 /* DataService.swift */,
-				8822A0641C2E8895007D66DB /* WebService.swift */,
+				8822A0641C2E8895007D66DB /* APIService.swift */,
 				8822A0CB1C2F107D007D66DB /* DefaultConstants.swift */,
 				88AF414D1C3F320300B2FEB8 /* AlterManager.swift */,
 			);
@@ -306,8 +306,8 @@
 		8822A0671C2E88BB007D66DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				88257B5A1C339C8F00B40B0F /* Bill.swift */,
 				88257B5C1C339CA300B40B0F /* Board.swift */,
+				88257B5A1C339C8F00B40B0F /* Bill.swift */,
 				88257B5E1C339CAE00B40B0F /* Person.swift */,
 				8851CDA61C49E01300784155 /* Payment.swift */,
 				8851CDA81C49E20800784155 /* IdStringExtension.swift */,
@@ -680,7 +680,7 @@
 				8822A0601C2E885C007D66DB /* BillViewController.swift in Sources */,
 				88B518911C312AEF009AE721 /* BalanceTableViewCell.swift in Sources */,
 				88B5189A1C3235F4009AE721 /* UserService.swift in Sources */,
-				8822A0651C2E8895007D66DB /* WebService.swift in Sources */,
+				8822A0651C2E8895007D66DB /* APIService.swift in Sources */,
 				8822A0C71C2F0E68007D66DB /* LeftMenuViewController.swift in Sources */,
 				8822A0B91C2E8B36007D66DB /* WYExtensionString.swift in Sources */,
 				8822A0BF1C2E8B36007D66DB /* WYExtensionUIScreen.swift in Sources */,

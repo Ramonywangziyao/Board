@@ -41,6 +41,13 @@ struct ViewControllerIdentifier {
     static let RootView = "RootViewController"
 }
 
+struct SeralizationKeys {
+    static let Board = "Board"
+    static let Bill = "Bill"
+    static let Person = "Person"
+    static let Payment = "Payment"
+}
+
 
 extension UIColor {
     class func fb_darkBlue() -> UIColor { return UIColor(hexCode: "#0e1f56") }

@@ -10,7 +10,7 @@ import UIKit
 
 class Board: NSObject, NSCoding {
     
-    var _id: String
+    let _id: String
     var name: String
     var isActive: Bool
     var creator: Person
@@ -76,6 +76,10 @@ class Board: NSObject, NSCoding {
         aCoder.encodeObject(payments, forKey: Keys.payments)
         aCoder.encodeObject(isCleared, forKey: Keys.isCleared)
         aCoder.encodeObject(createdAt, forKey: Keys.createdAt)
+    }
+    
+    func saveToFile() {
+        NSKeyedArchiver.archiveRootObject(self, toFile: DataService.filenameGenerate(self))
     }
 
 }

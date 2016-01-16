@@ -10,7 +10,7 @@ import UIKit
 
 class Payment: NSObject, NSCoding {
 
-    var _id: String
+    let _id: String
     var amount: Double
     var fromPerson: String
     var toPerson: String

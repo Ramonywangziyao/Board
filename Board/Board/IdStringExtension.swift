@@ -10,20 +10,20 @@ import UIKit
 
 extension String {
     
-    func idToPerson() {
-        
+    func idToPerson() -> Person? {
+        return DataService.currentBoard?.members?.filter { $0._id == self }.first
     }
     
-    func idToBill() {
-        
+    func idToBill() -> Bill? {
+        return DataService.currentBoard?.bills?.filter { $0._id == self }.first
     }
     
-    func idToBoard() {
-        
+    func idToBoard() -> Board? {
+        return DataService.getBoard(id: self)
     }
     
-    func idToPayment() {
-        
+    func idToPayment() -> Payment? {
+        return DataService.currentBoard?.payments?.filter { $0._id == self }.first
     }
     
 }

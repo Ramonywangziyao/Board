@@ -10,13 +10,13 @@ import UIKit
 
 class Bill: NSObject, NSCoding {
     
-    var _id: String
+    let _id: String
     var title: String
     var time: NSDate
     var photoId: String
     var amounts: [String: Double]
     var isPaid: Bool
-    var creator: Person
+    var creator: String
     var isDeleted: Bool
     
     struct Key {
@@ -30,7 +30,7 @@ class Bill: NSObject, NSCoding {
         static let isDeleted = "BillIsDeleted"
     }
     
-    init(_id: String, title: String, time: NSDate, photoId: String, amounts: [String: Double], creator: Person) {
+    init(_id: String, title: String, time: NSDate, photoId: String, amounts: [String: Double], creator: String) {
         self._id = _id
         self.title = title
         self.time = time
@@ -49,7 +49,7 @@ class Bill: NSObject, NSCoding {
             let photoId = aDecoder.decodeObjectForKey(Key.photoId) as? String,
             let amounts = aDecoder.decodeObjectForKey(Key.amounts) as? [String: Double],
             let isPaid = aDecoder.decodeObjectForKey(Key.isPaid) as? Bool,
-            let creator = aDecoder.decodeObjectForKey(Key.creator) as? Person,
+            let creator = aDecoder.decodeObjectForKey(Key.creator) as? String,
             let isDeleted = aDecoder.decodeObjectForKey(Key.isDeleted) as? Bool
         else { fatalError() }
         self._id = _id

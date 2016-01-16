@@ -10,7 +10,7 @@ import UIKit
 
 class Person: NSObject, NSCoding {
     
-    var _id: String
+    let _id: String
     var facebookId: String
     var avatar: String
     var accessToken: String
