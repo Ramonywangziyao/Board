@@ -11,7 +11,7 @@ import UIKit
 extension String {
     
     func idToPerson() -> Person? {
-        return DataService.currentBoard?.members?.filter { $0._id == self }.first
+        return DataService.currentBoard?.allMembers.filter { $0._id == self }.first
     }
     
     func idToBill() -> Bill? {

@@ -19,6 +19,11 @@ class Board: NSObject, NSCoding {
     var payments: [Payment]?
     var isCleared: Bool
     var createdAt: NSDate
+    var allMembers: [Person] {
+        if let members = members {
+            return [creator] + members
+        } else { return [creator] }
+    }
     
     struct Keys {
         static let _id = "BoardId"

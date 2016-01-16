@@ -13,7 +13,7 @@ class Bill: NSObject, NSCoding {
     let _id: String
     var title: String
     var time: NSDate
-    var photoId: String
+    var photoId: String?
     var amounts: [String: Double]
     var isPaid: Bool
     var creator: String
@@ -30,7 +30,7 @@ class Bill: NSObject, NSCoding {
         static let isDeleted = "BillIsDeleted"
     }
     
-    init(_id: String, title: String, time: NSDate, photoId: String, amounts: [String: Double], creator: String) {
+    init(_id: String, title: String, time: NSDate, amounts: [String: Double], creator: String, photoId: String?=nil) {
         self._id = _id
         self.title = title
         self.time = time
@@ -46,7 +46,7 @@ class Bill: NSObject, NSCoding {
         guard let _id = aDecoder.decodeObjectForKey(Key._id) as? String,
             let title = aDecoder.decodeObjectForKey(Key.title) as? String,
             let time = aDecoder.decodeObjectForKey(Key.time) as? NSDate,
-            let photoId = aDecoder.decodeObjectForKey(Key.photoId) as? String,
+            let photoId = aDecoder.decodeObjectForKey(Key.photoId) as? String?,
             let amounts = aDecoder.decodeObjectForKey(Key.amounts) as? [String: Double],
             let isPaid = aDecoder.decodeObjectForKey(Key.isPaid) as? Bool,
             let creator = aDecoder.decodeObjectForKey(Key.creator) as? String,

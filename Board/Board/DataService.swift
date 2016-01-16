@@ -37,4 +37,15 @@ class DataService: NSObject {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(path) as? Board
     }
     
+    class func test() {
+        let person = Person(_id: "person", facebookId: "facebookPerson", avatar: "hhh", accessToken: "access", bills: ["billid"], boards: ["boardid"], createdAt: NSDate(), lastLoginAt: NSDate())
+        let bill = Bill(_id: "billid", title: "A Bill", time: NSDate(), amounts: ["person" : 103], creator: "person")
+        let board = Board(_id: "boardid", name: "A Board", creator: person, createdAt: NSDate())
+        board.bills = [bill]
+        DataService.currentBoard = board
+        DataService.currentBoard!.saveToFile()
+        let b = DataService.getBoard(id: "boardid")
+        print(b!.bills?.first?.creator.idToPerson()?._id)
+    }
+    
 }
