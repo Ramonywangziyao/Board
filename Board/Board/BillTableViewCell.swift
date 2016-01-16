@@ -16,16 +16,15 @@ class BillTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = .None
-        self.contentView.backgroundColor = UIColor.clearColor()
         self.backgroundColor = UIColor.clearColor()
         
         backView = UIView()
-        backView.backgroundColor = UIColor.fb_white()
+        backView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
         self.addSubview(backView)
         backView.snp_makeConstraints { make in
-            make.top.equalTo(self.snp_top).offset(8)
-            make.left.equalTo(self.snp_left).offset(8)
-            make.right.equalTo(self.snp_right).offset(-8)
+            make.top.equalTo(self.snp_top).offset(4)
+            make.left.equalTo(self.snp_left)
+            make.right.equalTo(self.snp_right)
             make.bottom.equalTo(self.snp_bottom)
             make.height.equalTo(92)
         }

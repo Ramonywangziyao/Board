@@ -13,7 +13,7 @@ import Spring
 class BaseViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var mainScrollView: UIScrollView!
-    @IBOutlet weak var topBarView: DesignableView!
+    @IBOutlet weak var topBarView: UIView!
     @IBOutlet weak var billTableButton: UIButton!
     @IBOutlet weak var balanceTableButton: UIButton!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -74,7 +74,6 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupBackgroundView() {
-        self.backgroundImageView.image = UIImage(named: "menu_background")
         var motionEffects: UIMotionEffectGroup {
             let yTilt = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
             yTilt.minimumRelativeValue = 12

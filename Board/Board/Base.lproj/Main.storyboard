@@ -174,8 +174,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-BU-pbf" userLabel="Background Image View">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-BU-pbf" userLabel="Background Image View">
+                                <rect key="frame" x="-12" y="52" width="399" height="627"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhx-8L-Fxp">
                                 <rect key="frame" x="0.0" y="104" width="375" height="563"/>
@@ -196,7 +196,7 @@
                                                 </connections>
                                             </containerView>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="QP3-Rj-EKj" firstAttribute="top" secondItem="EEe-4r-nR9" secondAttribute="top" id="0lg-Qb-ltU"/>
                                             <constraint firstItem="QP3-Rj-EKj" firstAttribute="leading" secondItem="wcI-Av-UdY" secondAttribute="trailing" id="AfY-L6-LFQ"/>
@@ -234,13 +234,14 @@
                                     <constraint firstAttribute="width" constant="24" id="jOi-Jd-oso"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-AE-n6P" customClass="DesignableView" customModule="Spring">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-AE-n6P">
                                 <rect key="frame" x="0.0" y="64" width="375" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-jZ-mjE">
-                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-jZ-mjE">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Bill" image="writeBill.png"/>
@@ -248,10 +249,11 @@
                                             <action selector="billTableButtonDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q97-qv-mYP"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO5-Zj-VGh">
-                                        <rect key="frame" x="187" y="0.0" width="187.5" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.75" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO5-Zj-VGh">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Balance" image="refund.png"/>
@@ -283,20 +285,6 @@
                                     <constraint firstItem="foQ-jZ-mjE" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="yvg-pt-z77"/>
                                     <constraint firstAttribute="bottom" secondItem="qO5-Zj-VGh" secondAttribute="bottom" id="zmz-Kn-L0H"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.69999999999999996"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetY">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -310,13 +298,13 @@
                             <constraint firstAttribute="trailing" secondItem="1u5-AE-n6P" secondAttribute="trailing" placeholder="YES" id="Ze9-UA-rWZ"/>
                             <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" placeholder="YES" id="fw3-LA-Tq8"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="bottom" id="hZG-ud-Xc9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PVo-BU-pbf" secondAttribute="bottom" id="i2I-Ko-Ess"/>
-                            <constraint firstAttribute="trailing" secondItem="PVo-BU-pbf" secondAttribute="trailing" id="l41-jg-PZJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PVo-BU-pbf" secondAttribute="bottom" constant="-12" id="i2I-Ko-Ess"/>
+                            <constraint firstAttribute="trailing" secondItem="PVo-BU-pbf" secondAttribute="trailing" constant="-12" id="l41-jg-PZJ"/>
                             <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="RJ8-ZA-fZu" secondAttribute="trailing" id="mXQ-50-KMC"/>
-                            <constraint firstItem="PVo-BU-pbf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nuk-0Y-hLd"/>
+                            <constraint firstItem="PVo-BU-pbf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-12" id="nuk-0Y-hLd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RJ8-ZA-fZu" secondAttribute="bottom" id="rpR-YP-yCG"/>
                             <constraint firstItem="RJ8-ZA-fZu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xQS-Jx-0ob"/>
-                            <constraint firstItem="PVo-BU-pbf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ya0-EB-BqP"/>
+                            <constraint firstItem="PVo-BU-pbf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-12" id="ya0-EB-BqP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -510,6 +498,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_img.jpg" width="375" height="667"/>
         <image name="menu.png" width="16" height="16"/>
         <image name="refund.png" width="16" height="16"/>
         <image name="writeBill.png" width="16" height="16"/>

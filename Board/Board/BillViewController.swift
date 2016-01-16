@@ -21,7 +21,7 @@ class BillViewController: UIViewController {
         super.viewDidLoad()
         // body view for pull to bounce
         let bodyView = UIView()
-        bodyView.backgroundColor = UIColor.fb_mediumBlue()
+        bodyView.backgroundColor = UIColor.clearColor() // UIColor.fb_mediumBlue()
         bodyView.frame = self.view.frame
         self.view.addSubview(bodyView)
         
