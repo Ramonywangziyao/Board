@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
                 self.loginSucceed = true
                 print(UserInfo.getUserName())
                 print(UserInfo.getUserEmail())
-                print(UserInfo.getUserPortrait())
+                print(UserInfo.getUserAvatar())
                 print(UserInfo.getUserCoverPhoto() ?? "No Cover Photo")
                 self.performSegueWithIdentifier(SegueIdentifier.Login, sender: nil)
                 self.navigationController?.setNavigationBarHidden(false, animated: true)

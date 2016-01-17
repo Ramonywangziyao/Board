@@ -24,7 +24,7 @@ struct UserKeys {
     static let Name = "userName"
     static let Token = "userToken"
     static let Email = "userEmail"
-    static let Portrait = "userPortrait"
+    static let Avatar = "userAvatar"
     static let CoverPhoto = "userCoverPhoto"
 }
 
@@ -32,6 +32,7 @@ struct SegueIdentifier {
     static let Login = "LoginSegue"
     static let DetailBill = "DetailBillSegue"
     static let AddBill = "AddBillSegue"
+    static let Logout = "LogoutSegue"
 }
 
 struct ViewControllerIdentifier {

@@ -26,8 +26,8 @@ class UserService: NSObject {
         return userDefault.stringForKey(UserKeys.Email) ?? ""
     }
     
-    func getUserPortrait() -> String {
-        return userDefault.stringForKey(UserKeys.Portrait) ?? ""
+    func getUserAvatar() -> String {
+        return userDefault.stringForKey(UserKeys.Avatar) ?? ""
     }
     
     func getUserId() -> String {
@@ -49,11 +49,11 @@ class UserService: NSObject {
                     self.userDefault.setObject(result["id"], forKey: UserKeys.Id)
                     self.userDefault.setObject(result["name"], forKey: UserKeys.Name)
                     self.userDefault.setObject(result["email"], forKey: UserKeys.Email)
-                    self.userDefault.setObject(((result["picture"]! as! [String: AnyObject])["data"]! as! [String: AnyObject])["url"]!, forKey: UserKeys.Portrait)
+                    self.userDefault.setObject(((result["picture"]! as! [String: AnyObject])["data"]! as! [String: AnyObject])["url"]!, forKey: UserKeys.Avatar)
                     if let coverPhotoPath = (result["cover"] as? [String: AnyObject]) {
                         self.userDefault.setObject(coverPhotoPath["source"], forKey: UserKeys.CoverPhoto)
                     } else {
-                        self.userDefault.setNilValueForKey(UserKeys.CoverPhoto)
+                        self.userDefault.setObject(nil, forKey: UserKeys.CoverPhoto)
                     }
                     self.userDefault.synchronize()
                     //TODO: upload facebook user data to server
@@ -66,11 +66,12 @@ class UserService: NSObject {
     }
     
     func logout() {
-        userDefault.setNilValueForKey(UserKeys.Id)
-        userDefault.setNilValueForKey(UserKeys.Email)
-        userDefault.setNilValueForKey(UserKeys.Name)
-        userDefault.setNilValueForKey(UserKeys.Portrait)
-        userDefault.setNilValueForKey(UserKeys.Token)
+        userDefault.setObject(nil, forKey: UserKeys.Id)
+        userDefault.setObject(nil, forKey: UserKeys.Avatar)
+        userDefault.setObject(nil, forKey: UserKeys.Email)
+        userDefault.setObject(nil, forKey: UserKeys.Name)
+        userDefault.setObject(nil, forKey: UserKeys.Token)
+        userDefault.setObject(nil, forKey: UserKeys.CoverPhoto)
         userDefault.synchronize()
     }
 }

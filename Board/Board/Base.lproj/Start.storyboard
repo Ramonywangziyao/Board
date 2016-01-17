@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Menu Root View Controller-->
@@ -42,13 +43,61 @@
                     <view key="view" contentMode="scaleToFill" id="IDk-Aw-eHu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deo-Bl-6di">
+                                <rect key="frame" x="20" y="20" width="250" height="627"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esq-yK-UJY">
+                                        <rect key="frame" x="0.0" y="597" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Oqk-mu-ebP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Log Out" image="menu_logout.png"/>
+                                        <connections>
+                                            <segue destination="xCo-K7-hq7" kind="presentation" identifier="LogoutSegue" modalTransitionStyle="flipHorizontal" id="b9L-oK-bAf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBT-cb-hTl">
+                                        <rect key="frame" x="125" y="597" width="125" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.19376453760000001" green="0.50850099329999998" blue="0.85232251879999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Setting" image="menu_setting.png"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kBT-cb-hTl" secondAttribute="bottom" id="7xN-4L-grF"/>
+                                    <constraint firstItem="esq-yK-UJY" firstAttribute="leading" secondItem="deo-Bl-6di" secondAttribute="leading" id="ALD-lQ-4in"/>
+                                    <constraint firstItem="kBT-cb-hTl" firstAttribute="height" secondItem="esq-yK-UJY" secondAttribute="height" id="Dub-hh-54z"/>
+                                    <constraint firstItem="kBT-cb-hTl" firstAttribute="leading" secondItem="esq-yK-UJY" secondAttribute="trailing" id="INu-FN-1Ta"/>
+                                    <constraint firstItem="kBT-cb-hTl" firstAttribute="leading" secondItem="esq-yK-UJY" secondAttribute="trailing" id="Ufu-kX-0Xf"/>
+                                    <constraint firstAttribute="trailing" secondItem="kBT-cb-hTl" secondAttribute="trailing" id="YgU-2a-cpe"/>
+                                    <constraint firstAttribute="bottom" secondItem="esq-yK-UJY" secondAttribute="bottom" id="boQ-Yl-TNQ"/>
+                                    <constraint firstItem="esq-yK-UJY" firstAttribute="width" secondItem="kBT-cb-hTl" secondAttribute="width" id="xCD-IT-kKO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="deo-Bl-6di" firstAttribute="top" secondItem="Tys-sp-gjJ" secondAttribute="bottom" id="6gX-09-W83"/>
+                            <constraint firstItem="uDO-2L-KRz" firstAttribute="top" secondItem="deo-Bl-6di" secondAttribute="bottom" constant="20" id="Gvg-Qs-5nZ"/>
+                            <constraint firstItem="deo-Bl-6di" firstAttribute="width" secondItem="IDk-Aw-eHu" secondAttribute="width" multiplier="0.666" id="es6-Op-HQ3"/>
+                            <constraint firstItem="deo-Bl-6di" firstAttribute="leading" secondItem="IDk-Aw-eHu" secondAttribute="leading" constant="20" id="tj1-NV-xhC"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="esq-yK-UJY" id="opf-cq-QHE"/>
+                        <outlet property="settingButton" destination="kBT-cb-hTl" id="HKZ-jp-I82"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cML-nH-Qrl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790.5" y="347.5"/>
+            <point key="canvasLocation" x="318.5" y="-500.5"/>
         </scene>
         <!--Login-->
         <scene sceneID="8tL-yj-otf">
@@ -119,4 +168,11 @@
             <point key="canvasLocation" x="-697.5" y="347.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu_logout.png" width="16" height="16"/>
+        <image name="menu_setting.png" width="16" height="16"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="b9L-oK-bAf"/>
+    </inferredMetricsTieBreakers>
 </document>
