@@ -17,7 +17,7 @@ extension BalanceViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
     
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
         let textAttributes = [
-            NSForegroundColorAttributeName: UIColor.lightGrayColor(),
+            NSForegroundColorAttributeName: UIColor.fb_white(),
             NSFontAttributeName: UIFont(name: "Helvetica", size: 17)!,
         ]
         return NSAttributedString(string: "No People", attributes: textAttributes)
@@ -25,7 +25,7 @@ extension BalanceViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
     
     func descriptionForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
         let textAttributes = [
-            NSForegroundColorAttributeName: UIColor.lightGrayColor(),
+            NSForegroundColorAttributeName: UIColor.fb_white(),
             NSFontAttributeName: UIFont(name: "Helvetica", size: 14)!,
         ]
         return NSAttributedString(string: "There is no record around, please setup your group and add your members! ", attributes: textAttributes)

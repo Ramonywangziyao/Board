@@ -46,7 +46,6 @@ class UserService: NSObject {
         if FBSDKAccessToken.currentAccessToken() != nil {
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, picture.type(normal), cover"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if error == nil {
-                    print(result)
                     self.userDefault.setObject(result["id"], forKey: UserKeys.Id)
                     self.userDefault.setObject(result["name"], forKey: UserKeys.Name)
                     self.userDefault.setObject(result["email"], forKey: UserKeys.Email)

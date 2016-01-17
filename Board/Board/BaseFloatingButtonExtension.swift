@@ -68,6 +68,7 @@ extension BaseViewController: LiquidFloatingActionButtonDataSource, LiquidFloati
             panAnimator.removeAllBehaviors()
             let centerOffset = UIOffsetMake(touchPointButton.x - CGRectGetMidX(floatingActionButton.bounds), touchPointButton.y - CGRectGetMidY(floatingActionButton.bounds))
             attachmentBehavior = UIAttachmentBehavior(item: floatingActionButton, offsetFromCenter: centerOffset, attachedToAnchor: touchPointView)
+            attachmentBehavior.frequency = 0
             panAnimator.addBehavior(attachmentBehavior)
         } else if sender.state == UIGestureRecognizerState.Changed {
             attachmentBehavior.anchorPoint = touchPointView

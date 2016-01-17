@@ -49,7 +49,6 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         mainScrollView.delegate = self
         setupFloatingButton()
-        setupBackgroundView()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -63,6 +62,7 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
             }
         }
         snapPoint = floatingActionButton.center
+        setupBackgroundView()
     }
 
     @IBAction func billTableButtonDidClicked(sender: UIButton) {
@@ -78,20 +78,27 @@ class BaseViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setupBackgroundView() {
+        let offset = 36
+        self.backgroundImageView.snp_makeConstraints {
+            $0.top.equalTo(self.view.snp_top).offset(-offset)
+            $0.left.equalTo(self.view.snp_left).offset(-offset)
+            $0.right.equalTo(self.view.snp_right).offset(offset)
+            $0.bottom.equalTo(self.view.snp_bottom).offset(offset)
+        }
         var motionEffects: UIMotionEffectGroup {
             let yTilt = UIInterpolatingMotionEffect(keyPath: "center.y", type: .TiltAlongVerticalAxis)
-            yTilt.minimumRelativeValue = 12
-            yTilt.maximumRelativeValue = 12
+            yTilt.minimumRelativeValue = -offset
+            yTilt.maximumRelativeValue = offset
             let xTilt = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
-            xTilt.minimumRelativeValue = 12
-            xTilt.maximumRelativeValue = 12
+            xTilt.minimumRelativeValue = -offset
+            xTilt.maximumRelativeValue = offset
             let effects = UIMotionEffectGroup()
             effects.motionEffects = [yTilt, xTilt]
             return effects
         }
         self.backgroundImageView.addMotionEffect(motionEffects)
     }
-    
+
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         if let scrollView = mainScrollView {
             currentSegmentIndex = Int(scrollView.contentOffset.x / UIScreen.mainScreenWidth)

@@ -177,7 +177,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-BU-pbf" userLabel="Background Image View">
                                 <rect key="frame" x="-12" y="52" width="399" height="627"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhx-8L-Fxp">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhx-8L-Fxp">
                                 <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-4r-nR9">
@@ -298,13 +298,13 @@
                             <constraint firstAttribute="trailing" secondItem="1u5-AE-n6P" secondAttribute="trailing" placeholder="YES" id="Ze9-UA-rWZ"/>
                             <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" placeholder="YES" id="fw3-LA-Tq8"/>
                             <constraint firstItem="vhx-8L-Fxp" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="bottom" id="hZG-ud-Xc9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PVo-BU-pbf" secondAttribute="bottom" constant="-12" id="i2I-Ko-Ess"/>
-                            <constraint firstAttribute="trailing" secondItem="PVo-BU-pbf" secondAttribute="trailing" constant="-12" id="l41-jg-PZJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PVo-BU-pbf" secondAttribute="bottom" constant="-12" placeholder="YES" id="i2I-Ko-Ess"/>
+                            <constraint firstAttribute="trailing" secondItem="PVo-BU-pbf" secondAttribute="trailing" constant="-12" placeholder="YES" id="l41-jg-PZJ"/>
                             <constraint firstItem="1u5-AE-n6P" firstAttribute="leading" secondItem="RJ8-ZA-fZu" secondAttribute="trailing" id="mXQ-50-KMC"/>
-                            <constraint firstItem="PVo-BU-pbf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-12" id="nuk-0Y-hLd"/>
+                            <constraint firstItem="PVo-BU-pbf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-12" placeholder="YES" id="nuk-0Y-hLd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RJ8-ZA-fZu" secondAttribute="bottom" id="rpR-YP-yCG"/>
                             <constraint firstItem="RJ8-ZA-fZu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xQS-Jx-0ob"/>
-                            <constraint firstItem="PVo-BU-pbf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-12" id="ya0-EB-BqP"/>
+                            <constraint firstItem="PVo-BU-pbf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-12" placeholder="YES" id="ya0-EB-BqP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -456,7 +456,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="B11-It-axF" firstAttribute="top" secondItem="ofZ-xe-Zvt" secondAttribute="bottom" id="8TI-jj-7I8"/>
                             <constraint firstItem="BY5-Jb-n9N" firstAttribute="top" secondItem="B11-It-axF" secondAttribute="bottom" id="Hhz-GP-Dq9"/>
