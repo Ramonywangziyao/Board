@@ -26,8 +26,14 @@ class DataService: NSObject {
         var filename = ""
         if let board = object as? Board {
             filename = SeralizationKeys.Board + board._id
+        } else if let bill = object as? Bill {
+            filename = SeralizationKeys.Bill + bill._id
+        } else if let person = object as? Person {
+            filename = SeralizationKeys.Person + person._id
+        } else if let payment = object as? Payment {
+            filename = SeralizationKeys.Payment + payment._id
         } else {
-            fatalError()
+            fatalError("The object can't be seralize, thus can't generate a filename")
         }
         return NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!.stringByAppendingString(filename)
     }

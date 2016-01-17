@@ -15,6 +15,10 @@ extension BillViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
         return UIImage(named: "empty_box_img")
     }
     
+    func verticalOffsetForEmptyDataSet(scrollView: UIScrollView!) -> CGFloat {
+        return -54
+    }
+    
     func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
         let textAttributes = [
             NSForegroundColorAttributeName: UIColor.fb_white(),
@@ -28,10 +32,11 @@ extension BillViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
             NSForegroundColorAttributeName: UIColor.fb_white(),
             NSFontAttributeName: UIFont(name: "Helvetica", size: 14)!,
         ]
-        return NSAttributedString(string: "There is no record around, please press the add button below to start your first bill.", attributes: textAttributes)
+        return NSAttributedString(string: "You haven't create any bill, please click the \"+\" button below to start your first bill.", attributes: textAttributes)
     }
     
     func emptyDataSetShouldAllowScroll(scrollView: UIScrollView!) -> Bool {
         return true
     }
+
 }
