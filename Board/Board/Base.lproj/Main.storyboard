@@ -177,6 +177,58 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_img.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PVo-BU-pbf" userLabel="Background Image View">
                                 <rect key="frame" x="-12" y="52" width="399" height="627"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-AE-n6P">
+                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-jZ-mjE">
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Bill" image="writeBill.png"/>
+                                        <connections>
+                                            <action selector="billTableButtonDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q97-qv-mYP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO5-Zj-VGh">
+                                        <rect key="frame" x="188" y="0.0" width="187" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="tintColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Balance" image="refund.png"/>
+                                        <connections>
+                                            <action selector="balanceTableButtonDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ov-hm-ScV"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIE-dP-a3g">
+                                        <rect key="frame" x="187" y="8" width="1" height="24"/>
+                                        <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="deu-nM-qpJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="24r-gu-DTn"/>
+                                    <constraint firstAttribute="height" constant="40" placeholder="YES" id="4Vb-ut-jto"/>
+                                    <constraint firstItem="RIE-dP-a3g" firstAttribute="centerX" secondItem="1u5-AE-n6P" secondAttribute="centerX" id="Bdb-Gk-CFA"/>
+                                    <constraint firstAttribute="bottom" secondItem="RIE-dP-a3g" secondAttribute="bottom" constant="8" id="Kjt-GX-QhN"/>
+                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="width" secondItem="foQ-jZ-mjE" secondAttribute="width" id="M2q-lu-Dv6"/>
+                                    <constraint firstAttribute="trailing" secondItem="qO5-Zj-VGh" secondAttribute="trailing" id="QSV-tg-CjC"/>
+                                    <constraint firstAttribute="bottom" secondItem="foQ-jZ-mjE" secondAttribute="bottom" id="gbX-pa-l9c"/>
+                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="leading" secondItem="foQ-jZ-mjE" secondAttribute="trailing" id="sXv-bX-wTT"/>
+                                    <constraint firstItem="foQ-jZ-mjE" firstAttribute="leading" secondItem="1u5-AE-n6P" secondAttribute="leading" id="uT0-wB-DJw"/>
+                                    <constraint firstItem="RIE-dP-a3g" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" constant="8" id="vXx-4h-7wt"/>
+                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="leading" secondItem="foQ-jZ-mjE" secondAttribute="trailing" id="x3O-Lw-33b"/>
+                                    <constraint firstItem="foQ-jZ-mjE" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="yvg-pt-z77"/>
+                                    <constraint firstAttribute="bottom" secondItem="qO5-Zj-VGh" secondAttribute="bottom" id="zmz-Kn-L0H"/>
+                                </constraints>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhx-8L-Fxp">
                                 <rect key="frame" x="0.0" y="104" width="375" height="563"/>
                                 <subviews>
@@ -232,58 +284,6 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="jOi-Jd-oso"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1u5-AE-n6P">
-                                <rect key="frame" x="0.0" y="64" width="375" height="40"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foQ-jZ-mjE">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="tintColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Bill" image="writeBill.png"/>
-                                        <connections>
-                                            <action selector="billTableButtonDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q97-qv-mYP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qO5-Zj-VGh">
-                                        <rect key="frame" x="188" y="0.0" width="187" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="tintColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Balance" image="refund.png"/>
-                                        <connections>
-                                            <action selector="balanceTableButtonDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ov-hm-ScV"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIE-dP-a3g">
-                                        <rect key="frame" x="187" y="8" width="1" height="24"/>
-                                        <color key="backgroundColor" red="0.96852236986160278" green="0.96868795156478882" blue="0.96851199865341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="1" id="deu-nM-qpJ"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="24r-gu-DTn"/>
-                                    <constraint firstAttribute="height" constant="40" placeholder="YES" id="4Vb-ut-jto"/>
-                                    <constraint firstItem="RIE-dP-a3g" firstAttribute="centerX" secondItem="1u5-AE-n6P" secondAttribute="centerX" id="Bdb-Gk-CFA"/>
-                                    <constraint firstAttribute="bottom" secondItem="RIE-dP-a3g" secondAttribute="bottom" constant="8" id="Kjt-GX-QhN"/>
-                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="width" secondItem="foQ-jZ-mjE" secondAttribute="width" id="M2q-lu-Dv6"/>
-                                    <constraint firstAttribute="trailing" secondItem="qO5-Zj-VGh" secondAttribute="trailing" id="QSV-tg-CjC"/>
-                                    <constraint firstAttribute="bottom" secondItem="foQ-jZ-mjE" secondAttribute="bottom" id="gbX-pa-l9c"/>
-                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="leading" secondItem="foQ-jZ-mjE" secondAttribute="trailing" id="sXv-bX-wTT"/>
-                                    <constraint firstItem="foQ-jZ-mjE" firstAttribute="leading" secondItem="1u5-AE-n6P" secondAttribute="leading" id="uT0-wB-DJw"/>
-                                    <constraint firstItem="RIE-dP-a3g" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" constant="8" id="vXx-4h-7wt"/>
-                                    <constraint firstItem="qO5-Zj-VGh" firstAttribute="leading" secondItem="foQ-jZ-mjE" secondAttribute="trailing" id="x3O-Lw-33b"/>
-                                    <constraint firstItem="foQ-jZ-mjE" firstAttribute="top" secondItem="1u5-AE-n6P" secondAttribute="top" id="yvg-pt-z77"/>
-                                    <constraint firstAttribute="bottom" secondItem="qO5-Zj-VGh" secondAttribute="bottom" id="zmz-Kn-L0H"/>
                                 </constraints>
                             </view>
                         </subviews>

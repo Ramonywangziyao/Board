@@ -25,7 +25,7 @@ extension BaseViewController: LiquidFloatingActionButtonDataSource, LiquidFloati
         cells.append(cellFactory("camera"))
         cells.append(cellFactory("refund"))
         
-        let floatingFrame = CGRectMake(self.view.frame.width - 72, self.view.frame.height - 72, 50, 50)
+        let floatingFrame = CGRectMake(self.view.frame.width - 80, self.view.frame.height - 80, 52, 52)
         floatingActionButton = createButton(floatingFrame, .Up)
         floatingActionButton.color = UIColor.fb_mediumBlue()
         self.view.addSubview(floatingActionButton)
@@ -34,7 +34,7 @@ extension BaseViewController: LiquidFloatingActionButtonDataSource, LiquidFloati
     
     func setupFloatingButtonPanAnimation() {
         let panGesture = UIPanGestureRecognizer(target: self, action: "panned:")
-        self.view.addGestureRecognizer(panGesture)
+        self.floatingActionButton.addGestureRecognizer(panGesture)
         panAnimator = UIDynamicAnimator(referenceView: self.view)
     }
     
@@ -64,18 +64,23 @@ extension BaseViewController: LiquidFloatingActionButtonDataSource, LiquidFloati
     func panned(sender: UIPanGestureRecognizer) {
         let touchPointView = sender.locationInView(self.view)
         let touchPointButton = sender.locationInView(self.floatingActionButton)
-        if sender.state == UIGestureRecognizerState.Began {
+        switch sender.state {
+        case .Began:
             panAnimator.removeAllBehaviors()
             let centerOffset = UIOffsetMake(touchPointButton.x - CGRectGetMidX(floatingActionButton.bounds), touchPointButton.y - CGRectGetMidY(floatingActionButton.bounds))
             attachmentBehavior = UIAttachmentBehavior(item: floatingActionButton, offsetFromCenter: centerOffset, attachedToAnchor: touchPointView)
             attachmentBehavior.frequency = 0
             panAnimator.addBehavior(attachmentBehavior)
-        } else if sender.state == UIGestureRecognizerState.Changed {
+            break;
+        case .Changed:
             attachmentBehavior.anchorPoint = touchPointView
-        } else if sender.state == UIGestureRecognizerState.Ended {
+            break;
+        case .Ended, .Cancelled, .Failed:
             panAnimator.removeBehavior(attachmentBehavior)
             snapBehavior = UISnapBehavior(item: floatingActionButton, snapToPoint: snapPoint)
             panAnimator.addBehavior(snapBehavior)
+            break;
+        default: break;
         }
     }
  

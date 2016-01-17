@@ -41,6 +41,7 @@ extension BillViewController: UITableViewDelegate, UITableViewDataSource {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let velocity = scrollView.panGestureRecognizer.velocityInView(self.tableView).y
         let floatingButton = (self.parentViewController as! BaseViewController).floatingActionButton
+        (self.parentViewController as! BaseViewController).panAnimator.removeAllBehaviors()
         if floatingButton.isClosed == false && scrollView.decelerating == false { floatingButton.close() }
         if velocity.isSignMinus && !floatingButton.isOpening {
             if floatingButton.isClosed == false { floatingButton.close() }
